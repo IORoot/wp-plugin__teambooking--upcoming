@@ -66,7 +66,6 @@ class TextField extends Abstracts\FormElement
                        placeholder="<?= $this->getTitle() ?>"
                        style="height:inherit;max-width: none;" <?= $this->required ? "required='required'" : '' ?> <?= $validation_regex ?>>
                 <?php $this->getValidationMessageLabel() ?>
-
                 <p class="tbk-field-description tbk-field-description__<?= esc_attr($this->hook) ?>"><?= $this->getDescription() ?></p>
 
                 <?php if ($this->getData('value_confirmation')) { ?>

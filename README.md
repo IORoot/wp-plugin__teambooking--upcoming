@@ -26,7 +26,33 @@ The files that are replaced are listed in the `/overrides/src/TeamBooking` direc
   
 ## FormElements/Textfield.php
 
+The changes are as follows:
+1. Line 66 - The Input now has a 'placeholder' attribute for a hint on what to enter.
+2. Line 69 - The description field has a new specific class to target it better and remove it without interferring with other description fields.
+
 ## Frontend/Form.php
+
+This script is used for the input form to take details from the customer. This has been HEAVILY CHANGED.
+
+The changes are as follows:
+1. Remove reservation details header. (232-235)
+2. Add a CUSTOM Wrapper DIV with the service ID in it. So we can target and style depending on the service.
+3. Split into LEFT / RIGHT side panels. Left = Details, Right = Booking Form.
+4. Create class methods for each part of the form.
+   1. `output_back_arrow()`
+   2. `output_day_date()`
+   3. `output_start_finish()`
+   4. `output_today_alert()`
+   5. `output_image()`
+   6. `output_location()`
+   7. `form_description()`
+   8. `output_commandotemple()`
+   9. `output_price()`
+   10. `output_title()`
+5. Remove the 'grouping' of fields.
+6. Move the coupon eentry to BELOW the pricee box.
+7. If class is FREE, skip the JQuery script.
+
 
 ## Shortcodes/Upcoming.php
 

@@ -109,17 +109,11 @@ class Form
         $string_book_now = __('Book now', 'team-booking');
         $string_book_and_pay = __('Book and pay', 'team-booking');
 
-        //  ┌────────────────────────────────────────────────┐
-        //  │                 Insert Header                  │
-        //  │          function output into header!          │
-        //  │                (via an action)                 │
-        //  └────────────────────────────────────────────────┘
         if (did_action('tbk_reservation_form_header') < 1) {
             add_action('tbk_reservation_form_header', array(
                 $this,
                 'form_header',
             ));
-
         }
         if (did_action('tbk_reservation_form_map') < 1) {
             add_action('tbk_reservation_form_map', array(
@@ -127,12 +121,6 @@ class Form
                 'form_map',
             ));
         }
-
-        //  ┌────────────────────────────────────────────────┐
-        //  │               Insert description               │
-        //  │          function output into header!          │
-        //  │                (via an action)                 │
-        //  └────────────────────────────────────────────────┘
         if (did_action('tbk_reservation_form_description') < 1) {
             add_action('tbk_reservation_form_description', array(
                 $this,
@@ -238,28 +226,18 @@ class Form
             }
         }
 
-        /*  Start of Output Buffer.
-         *
-         */
+        /*  Start of Output Buffer. */
         ob_start();
         ?>
         <?php
-
-        /*
-         * CUSTOM Wrapper with service ID in it.
-        */
+        /** CUSTOM Wrapper with service ID in it. */
         echo '<div class="tbk-detail-wrapper tbk-detail__'. $this->service_id . '">';
-
 
                 //  ┌────────────────────────────────────────────────┐
                 //  │                   Container                    │
                 //  └────────────────────────────────────────────────┘
                 echo '<div class="tbk-reservation-form-container">';
                 ?>
-                
-                        <?php //self::selectVimeoVideo($this->service_id); ?>
-                        <?php //Actions\reservation_form_map($this); ?>
-
                             <?php 
 
                                 //  ┌───────────────────────────────────────────┐ 
@@ -308,11 +286,6 @@ class Form
 
                                 echo '</div>';
 
-
-
-
-
-
                                 //  ┌────────────────────────────────────────────────┐
                                 //  │                  BOOKING FORM                  │
                                 //  └────────────────────────────────────────────────┘
@@ -333,9 +306,7 @@ class Form
 
                                         echo '</div>';
 
-                                        //  ┌────────────────────────────────────────────────┐
-                                        //  │          Skip the form and end early!          │
-                                        //  └────────────────────────────────────────────────┘
+                                        /** CommandoTemple - End form early. */
                                         return ob_get_clean();
 
                                     } 
@@ -350,19 +321,20 @@ class Form
                                             <input type="hidden" name="service" value="<?= esc_attr($this->service_id) ?>">
                                             <input type="hidden" name="post_id" value="">
                                             <input type="hidden" name="service_location" value="<?= $this->service_location ?>">
-                                            <input type="hidden" name="customer_wp_id" value="<?= isset($user) ? esc_attr($user->getId()) : '' ?>">
-
+                                            <input type="hidden" name="customer_wp_id"
+                                                value="<?= isset($user) ? esc_attr($user->getId()) : '' ?>">
                                             <?php if (!$this->is_checkout && $this->service->getClass() !== 'unscheduled') { ?>
-                                                <input type="hidden" name="slot" value="<?= Toolkit\objEncode($this->slot, TRUE, $this->slot->getUniqueId()) ?>">
+                                                <input type="hidden" name="slot"
+                                                        value="<?= Toolkit\objEncode($this->slot, TRUE, $this->slot->getUniqueId()) ?>">
                                                 <input type="hidden" name="owner" value="<?= esc_attr($this->coworker_id) ?>">
                                             <?php }
 
                                             //Let's render the hidden fields (pre-filled user data) if any
                                             foreach ($form_fields_hidden_markup as $hiddenfield) {
+                                                 /** @var $field FormElement */
                                                 echo $hiddenfield->getMarkup(TRUE);
                                             }
 
-                                            // loop  normal fields
                                             $group_limit = 2;
                                             $i = 1;
                                             $j = 0;
@@ -376,19 +348,11 @@ class Form
                                                         echo "</div><div class='tbk-fields'>";
                                                     }
                                                 } else {
-                                                    //if ($i === 1) echo "<div class='$group_limit_textual tbk-fields'>";
                                                     if ($i === 1) echo "<div class='tbk-fields'>";
                                                 }
 
-
-                                                /** 
-                                                 * output field details.
-                                                 * 
-                                                 * @var $field FormElement 
-                                                 * */
                                                 $field->setServiceId($this->service_id);
                                                 echo $field->getMarkup();
-
                                                 // Close grouping
                                                 if ($i === $group_limit || $field->getType() === 'paragraph') {
                                                     $i = 1; // reset
@@ -396,31 +360,20 @@ class Form
                                                 } else {
                                                     $i++;
                                                 }
-
-
                                             }
                                             ?>
                                         </form>
-
                                     <?php } ?>
                             
                                 <?php 
-                                //  ┌────────────────────────────────────────────────┐
-                                //  │                  FORM FOOTER                   │
-                                //  └────────────────────────────────────────────────┘
+                                /** Form Footer */
                                 if ($this->service->getSettingsFor('bookable') !== 'nobody') {
 
                                     $currency_array = Toolkit\getCurrencies($this->settings->getCurrencyCode());
                                 
                                     echo '<div class="tbk-reservation-form-footer">';
-                                    
-                                   
-                                    
-                                    
-                                    //  ┌────────────────────────────────────────────────┐
-                                    //  │           NUMBER OF TICKETS & PRICE            │
-                                    //  └────────────────────────────────────────────────┘
-
+                                                   
+                                    /** Insert Tickets & Price */
                                     if (!$this->is_checkout
                                         && ($this->service->getClass() === 'event' || $this->service->getPotentialPrice($this->slot) > 0)
                                     ) {
@@ -440,11 +393,7 @@ class Form
                                         }
                                         $id = 'tbk-tickets-price-section-' . Toolkit\randomNumber(10);
                                         ?>
-
-
-
                                         <div class="tbk-tickets-price-section" id="<?= $id ?>">
-
                                             <table>
                                                 <tr>
                                                     <?php
@@ -510,17 +459,13 @@ class Form
 
 
                                             <?php 
-                                            
-                                            //  ┌────────────────────────────────────────────────┐
-                                            //  │          Insert jQUERY for price box           │
-                                            //  └────────────────────────────────────────────────┘ 
-                                            
+                                            /** Insert JQuery */
                                             if ($this->service->getPotentialPrice($this->slot) > 0) { ?>
                                                 <script>
                                                     jQuery(document).ready(function ($) {
                                                         $('#<?=$id?>').tbkTicketLine({
-                                                            defaultAmountUnit    : <?=$base_price?>,
-                                                            defaultAmountUnitDisc: <?=$discounted_price?>,
+                                                            defaultAmountUnit    : <?= $base_price ?>,
+                                                            defaultAmountUnitDisc: <?= $discounted_price ?>,
                                                             currencyFormat       : '<?= $currency_array['format'] ?>',
                                                             currencySymbol       : '<?= $currency_array['symbol'] ?>',
                                                             decimals             : '<?=$currency_array['decimal'] === TRUE ? 2 : 0 ?>'
@@ -529,20 +474,14 @@ class Form
                                                 </script>
                                             <?php } ?>
 
-
                                     <?php } ?>
 
-
                                     <?php 
-                                    //  ┌────────────────────────────────────────────────┐
-                                    //  │              INSERT COUPON ENTRY               │
-                                    //  └────────────────────────────────────────────────┘
+                                    /** Insert Coupon Entry */
                                     if (!$this->is_checkout && $this->service->getPotentialPrice($this->slot) > 0 && Functions\isThereOneCouponAtLeast()) {
                                         echo self::coupon_line();
                                     } 
                                     ?>
-
-
                                         <div class="tbk-book-now">
                                             <!-- confirm button -->
                                             <?php if ($this->is_checkout) {
@@ -551,9 +490,7 @@ class Form
                                                 } else {
                                                     echo Components\Form::checkoutFooterActions($there_are_files);
                                                 }
-                                            } else {
-
-                                                
+                                            } else {                                     
                                                 $button_text = (count($this->settings->getPaymentGatewaysActive()) == 1
                                                     && $this->service->getSettingsFor('payment') === 'immediately'
                                                     && (isset($base_price) ? $base_price : 0) > 0)
@@ -561,8 +498,6 @@ class Form
                                                     : esc_html($string_book_now);
                                                 $id = 'tbk-book-now-button' . Toolkit\randomNumber(10);
                                                 ?>
-
-
                                                 <button class="tbk-book-now-button" id="<?= $id ?>" type="submit"
                                                         data-files="<?= $there_are_files ? 1 : 0 ?>">
                                                     <?= $button_text ?>
@@ -577,8 +512,6 @@ class Form
 
                                                     <?= isset($customer_reservations_left) ? '<span class="tbk-services-left">(' . $customer_reservations_left . ' ' . esc_html__('left', 'team-booking') . ')</span>' : '' ?>
                                                 </button>
-
-
                                                 <script>
                                                     jQuery(document).ready(function ($) {
                                                         $('#<?=$id?>').tbkAmountButton({
@@ -598,18 +531,12 @@ class Form
                                                     });
                                                 </script>
                                             <?php } ?>
-
                                         </div>
+                                    </div>                             
+                                </div> <!-- tbk-reservation-form-footer -->
 
-                                    </div>
-                                    
-                                </div>
-
-                                    <?php 
-                                    
-                                    //  ┌────────────────────────────────────────────────┐
-                                    //  │                 Admin Messages                 │
-                                    //  └────────────────────────────────────────────────┘    
+                                    <?php
+                                    /** Admin Messages */   
                                     if (!$this->is_checkout
                                         && $this->service->getClass() === 'event'
                                         && Functions\isAdmin()
@@ -623,38 +550,11 @@ class Form
                                         echo Components\Form::adminReadOnlyAdvice();
                                     }
                                 } ?>
-  
                 </div>
         <?php
 
-        /*
-        *  Close the new custom wrapper
-        */
-        echo '</div>';
-
+        echo '</div>'; // tbk-detail-wrapper
         return ob_get_clean();
-    }
-
-    //  ┌───────────────────────────────────────────┐ 
-    //  │                                           │░
-    //  │                   Video                   │░
-    //  │                                           │░
-    //  └───────────────────────────────────────────┘░
-    //   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-    public static function selectVimeoVideo($service_id){
-        
-        $video_id = 265767256 ;
-        if ($service_id == 'commandotemple-indoor') { $video_id = 321505926; }
-        if ($service_id == 'parkour-class') { $video_id = 265767256; }
-        if ($service_id == 'beginner-outdoor') { $video_id = 321520276; }
-        if ($service_id == 'youth-class-8-12') { $video_id = 321515938; }
-        if ($service_id == 'parkour-free-class') { $video_id = 321515315; }
-
-        $video = '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/'. $video_id .'?color=F9BE32&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>';
-        
-        echo $video;
-
-        return;
     }
 
     //  ┌───────────────────────────────────────────┐ 
@@ -686,7 +586,6 @@ class Form
         <?php
         return ob_get_clean();
     }
-
 
     //  ┌───────────────────────────────────────────┐ 
     //  │                                           │░
@@ -764,7 +663,21 @@ class Form
         return ob_get_clean();
     }
 
-    
+    //  ┌───────────────────────────────────────────┐ 
+    //  │                                           │░
+    //  │                   Title                   │░
+    //  │                                           │░
+    //  └───────────────────────────────────────────┘░
+    //   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+    /**
+     * @param \TeamBooking\Frontend\Form $form
+     */
+    public function form_header($form)
+    {
+        ob_start();
+        echo $this->output_title($form);  
+        echo ob_get_clean();
+    }
 
     //  ┌───────────────────────────────────────────┐ 
     //  │                                           │░
@@ -782,6 +695,19 @@ class Form
         }
     }
 
+    //  ┌───────────────────────────────────────────┐ 
+    //  │                                           │░
+    //  │                Description                │░
+    //  │                                           │░
+    //  └───────────────────────────────────────────┘░
+    //   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+    /**
+     * @param \TeamBooking\Frontend\Form $form
+     */
+    public function form_description($form)
+    {
+        if ($form->service->getDescription()) echo Components\Form::serviceDescription($form->service->getDescription(TRUE));
+    }
 
     //  ┌───────────────────────────────────────────┐ 
     //  │                                           │░
@@ -903,24 +829,7 @@ class Form
         return ob_get_clean();
     }
 
-    //  ┌───────────────────────────────────────────┐ 
-    //  │                                           │░
-    //  │                   Title                   │░
-    //  │                                           │░
-    //  └───────────────────────────────────────────┘░
-    //   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-    /**
-     * @param \TeamBooking\Frontend\Form $form
-     */
-    public function form_header($form)
-    {
 
-        ob_start();
-
-        echo $this->output_title($form);  
-
-        echo ob_get_clean();
-    }
     
     //  ┌───────────────────────────────────────────┐ 
     //  │                                           │░
@@ -938,20 +847,7 @@ class Form
         return ob_get_clean();
     }
 
-    //  ┌───────────────────────────────────────────┐ 
-    //  │                                           │░
-    //  │                Description                │░
-    //  │                                           │░
-    //  └───────────────────────────────────────────┘░
-    //   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-    /**
-     * @param \TeamBooking\Frontend\Form $form
-     */
-    public function form_description($form){
-        if ($form->service->getDescription()) { 
-            echo Components\Form::serviceDescription($form->service->getDescription(TRUE));
-        }
-    }
+
 
     //  ┌───────────────────────────────────────────┐ 
     //  │                                           │░

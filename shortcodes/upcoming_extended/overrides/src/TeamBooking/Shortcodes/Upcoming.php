@@ -17,7 +17,7 @@ use TeamBooking\Database\Services,
  * 
  * NOTE - THIS IS A SYMBOLIC LINK TO THE TEAM-BOOKING-EXTENDED PLUGIN.
  * 
- * Upcoming.php -> ../../../../team-booking-extended/shortcodes/upcoming_extended/overrides/src/TeamBooking/Shortcodes/Upcoming.php
+ * Upcoming.php -> ../../../../andyp_teambooking_upcoming/shortcodes/upcoming_extended/overrides/src/TeamBooking/Shortcodes/Upcoming.php
  * 
  * 
  * This version of the 'Upcoming' shortcode is extended to include new DOM structures
