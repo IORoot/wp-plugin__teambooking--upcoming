@@ -1,0 +1,1007 @@
+@charset "UTF-8";
+/* Mixins */
+.londonparkour {
+  /* Team Booking Redesign Style */
+  /*
+  *  SLIDE 1 - ALL SLOTS
+  */
+  /* Team Booking Redesign Style */
+  /*
+      *  SLIDE 2 - Detail Wrapper
+  */
+  /*
+  *  SLIDE 2 - DETAILS - TABLET
+  */
+  /* Override defaults */
+  /*
+  *  SLIDE 2 - DETAILS - MOBILE
+  */
+  /* Override defaults */
+  /* Team Booking Redesign Style */
+  /*
+      *  SLIDE 4 - Payment Wrapper
+  */
+  /* Main Container */
+  /*
+  *  SLIDE 2 - DETAILS - TABLET
+  */
+  /* Override defaults */
+  /*
+  *  SLIDE 2 - DETAILS - MOBILE
+  */
+  /* Override defaults */
+  /* Team Booking Redesign Style */
+  /*
+      *  SLIDE 5 - Thank You
+  */
+}
+.londonparkour .tbk-upcoming {
+  /* Team Booking Redesign Style */
+  /*
+  *  SLIDE 1 - ALL SLOTS - TABLET
+  */
+  /* Override defaults */
+  /* Team Booking Redesign Style */
+  /*
+  *  SLIDE 1 - ALL SLOTS - MOBILE
+  */
+  /* Override defaults */
+}
+.londonparkour .tbk-upcoming .tbk-main-calendar-settings {
+  margin: 0px;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar {
+  border-radius: 0px;
+  background-color: transparent;
+  /* Resize info box to accomdate missing calendar box */
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-calendar-date {
+  display: none;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  color: #242424;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li {
+  float: left;
+  width: 33%;
+  margin-bottom: 29px;
+  border-radius: 0px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li:nth-child(1), .londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li:nth-child(3n+1) {
+  padding-right: 29px;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li:nth-child(2), .londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li:nth-child(3n+2) {
+  width: 34%;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li:nth-child(3n) {
+  padding-left: 29px;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper {
+  position: relative;
+  background: #ffffff;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot {
+  width: 100%;
+  height: 464px;
+  border-radius: 0px;
+  padding: 0px;
+  margin: 0px;
+  transition: transform 0.3s linear;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot:hover {
+  opacity: 0.7;
+  box-shadow: rgba(62, 57, 107, 0.18) 0px 16px 32px 0px, transparent 0px 0px 0px;
+  transform: translate(0px, -5px);
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-alert {
+  width: 16.66%;
+  display: block;
+  height: 145px;
+  padding-top: 29px;
+  position: absolute;
+  top: 0px;
+  right: 3%;
+  text-align: center;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-alert__parkour-class {
+  color: #E86546;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-alert__commandotemple-indoor {
+  color: #D0C8B3;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-alert__beginner-outdoor {
+  color: #53A5E3;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-alert__youth-class-8-12 {
+  color: #11998E;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-alert__parkour-free-class {
+  color: #E34F65;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-alert__private-booking {
+  color: #FBAB7E;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-alert__icon::after {
+  font-family: "Material Icons";
+  content: "";
+  font-size: 58px;
+  display: inline-block;
+  width: 100%;
+  height: 58px;
+  line-height: 58px;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-slot-info {
+  padding: 29px 8.33% 0px 8.33%;
+  height: 145px;
+  font-family: Gill Sans, Gill Sans MT, sans-serif;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-slot-info__parkour-class {
+  background-color: #E86546;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-slot-info__commandotemple-indoor {
+  background-color: #D0C8B3;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-slot-info__beginner-outdoor {
+  background-color: #53A5E3;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-slot-info__youth-class-8-12 {
+  background-color: #11998E;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-slot-info__parkour-free-class {
+  background-color: #E34F65;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-slot-info__private-booking {
+  background-color: #FBAB7E;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-slot-info .tbk-service-name {
+  display: block;
+  line-height: 29px;
+  font-size: 29px;
+  font-weight: 600;
+  text-align: left;
+  width: 100%;
+  height: 29px;
+  text-overflow: clip;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-slot-info .tbk-service-name__parkour-class {
+  color: #E86546;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-slot-info .tbk-service-name__commandotemple-indoor {
+  color: #D0C8B3;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-slot-info .tbk-service-name__beginner-outdoor {
+  color: #53A5E3;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-slot-info .tbk-service-name__youth-class-8-12 {
+  color: #11998E;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-slot-info .tbk-service-name__parkour-free-class {
+  color: #E34F65;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-slot-info .tbk-service-name__private-booking {
+  color: #FBAB7E;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-slot-info .tbk-date {
+  text-align: left;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-slot-info .tbk-date .tbk-times {
+  height: 29px;
+  font-size: 18px;
+  line-height: 29px;
+  text-align: center;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-slot-info .tbk-date .tbk-times .tbk-ev-txt-wrap {
+  font-weight: 400;
+  font-family: Gill Sans, Gill Sans MT, sans-serif !important;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-slot-info .tbk-date .tbk-times :nth-child(3) {
+  display: none;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-slot-info .tbk-date .tbk-times :nth-child(4) {
+  display: none;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-slot-info .tbk-location {
+  width: 100%;
+  height: 58px;
+  font-size: 18px;
+  line-height: 58px;
+  text-align: left;
+  text-overflow: clip;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-class-colour-background {
+  height: 100%;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-class-colour-background__parkour-class {
+  background-color: #E86546;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-class-colour-background__commandotemple-indoor {
+  background-color: #D0C8B3;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-class-colour-background__beginner-outdoor {
+  background-color: #53A5E3;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-class-colour-background__youth-class-8-12 {
+  background-color: #11998E;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-class-colour-background__parkour-free-class {
+  background-color: #E34F65;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-class-colour-background__private-booking {
+  background-color: #FBAB7E;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-class-image-background {
+  position: absolute;
+  bottom: 0px;
+  height: 319px;
+  width: 100%;
+  background: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='100%25' height='100%25' viewBox='0 0 1921 1082' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Grids' stroke='none' stroke-width='2' fill='none' fill-rule='evenodd' stroke-linecap='square'%3E%3Cg id='Grid-/-GoldenCanonGrid-1920' transform='translate(1.000000, 0.000000)' stroke='%23242424' %3E%3Cpath d='M1.17002645,2.58823529 L1917.67335,1079.41176' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M1.17002645,2.58823529 L1917.67335,1079.41176' id='Line' opacity='0.200000003' transform='translate(959.421687, 541.000000) scale(1, -1) translate(-959.421687, -541.000000) '%3E%3C/path%3E%3Cpath d='M960.0067,2.58823529 L1918.25836,1079.41176' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M960.0067,2.58823529 L1918.25836,1079.41176' id='Line' opacity='0.200000003' transform='translate(1439.132530, 541.000000) scale(1, -1) translate(-1439.132530, -541.000000) '%3E%3C/path%3E%3Cpath d='M0.585013224,2.58823529 L958.836674,1079.41176' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M0.585013224,2.58823529 L958.836674,1079.41176' id='Line' opacity='0.200000003' transform='translate(479.710843, 541.000000) scale(1, -1) translate(-479.710843, -541.000000) '%3E%3C/path%3E%3Cpath d='M0.292682927,1.58970588 L479.707317,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M0.292682927,1.58970588 L479.707317,1079.41029' id='Line' opacity='0.200000003' transform='translate(240.000000, 540.500000) scale(1, -1) translate(-240.000000, -540.500000) '%3E%3C/path%3E%3Cpath d='M479.292507,1.58970588 L958.418337,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M479.292507,1.58970588 L958.418337,1079.41029' id='Line' opacity='0.200000003' transform='translate(718.855422, 540.500000) scale(1, -1) translate(-718.855422, -540.500000) '%3E%3C/path%3E%3Cpath d='M960.291897,1.58970588 L1438.41955,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M960.291897,1.58970588 L1438.41955,1079.41029' id='Line' opacity='0.200000003' transform='translate(1199.355723, 540.500000) scale(1, -1) translate(-1199.355723, -540.500000) '%3E%3C/path%3E%3Cpath d='M1439.29251,1.58970588 L1918.41834,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M1439.29251,1.58970588 L1918.41834,1079.41029' id='Line' opacity='0.200000003' transform='translate(1678.855422, 540.500000) scale(1, -1) translate(-1678.855422, -540.500000) '%3E%3C/path%3E%3Cpath d='M959.421687,1 L959.421687,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M479.37079,1 L479.37079,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M716.340053,1 L716.340053,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M1199.34005,1 L1199.34005,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M238.340053,1 L238.340053,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M1678.34005,1 L1678.34005,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M1438.79248,1 L1438.79248,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,217 L1918.84337,217' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,865.176471 L1918.84337,865.176471' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,720.176471 L1918.84337,720.176471' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,360.176471 L1918.84337,360.176471' id='Line' opacity='0.100000001'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='100%25' height='100%25' viewBox='0 0 1921 1082' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Grids' stroke='none' stroke-width='2' fill='none' fill-rule='evenodd' stroke-linecap='square'%3E%3Cg id='Grid-/-GoldenCanonGrid-1920' transform='translate(1.000000, 0.000000)' stroke='%23242424' %3E%3Cpath d='M1.17002645,2.58823529 L1917.67335,1079.41176' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M1.17002645,2.58823529 L1917.67335,1079.41176' id='Line' opacity='0.200000003' transform='translate(959.421687, 541.000000) scale(1, -1) translate(-959.421687, -541.000000) '%3E%3C/path%3E%3Cpath d='M960.0067,2.58823529 L1918.25836,1079.41176' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M960.0067,2.58823529 L1918.25836,1079.41176' id='Line' opacity='0.200000003' transform='translate(1439.132530, 541.000000) scale(1, -1) translate(-1439.132530, -541.000000) '%3E%3C/path%3E%3Cpath d='M0.585013224,2.58823529 L958.836674,1079.41176' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M0.585013224,2.58823529 L958.836674,1079.41176' id='Line' opacity='0.200000003' transform='translate(479.710843, 541.000000) scale(1, -1) translate(-479.710843, -541.000000) '%3E%3C/path%3E%3Cpath d='M0.292682927,1.58970588 L479.707317,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M0.292682927,1.58970588 L479.707317,1079.41029' id='Line' opacity='0.200000003' transform='translate(240.000000, 540.500000) scale(1, -1) translate(-240.000000, -540.500000) '%3E%3C/path%3E%3Cpath d='M479.292507,1.58970588 L958.418337,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M479.292507,1.58970588 L958.418337,1079.41029' id='Line' opacity='0.200000003' transform='translate(718.855422, 540.500000) scale(1, -1) translate(-718.855422, -540.500000) '%3E%3C/path%3E%3Cpath d='M960.291897,1.58970588 L1438.41955,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M960.291897,1.58970588 L1438.41955,1079.41029' id='Line' opacity='0.200000003' transform='translate(1199.355723, 540.500000) scale(1, -1) translate(-1199.355723, -540.500000) '%3E%3C/path%3E%3Cpath d='M1439.29251,1.58970588 L1918.41834,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M1439.29251,1.58970588 L1918.41834,1079.41029' id='Line' opacity='0.200000003' transform='translate(1678.855422, 540.500000) scale(1, -1) translate(-1678.855422, -540.500000) '%3E%3C/path%3E%3Cpath d='M959.421687,1 L959.421687,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M479.37079,1 L479.37079,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M716.340053,1 L716.340053,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M1199.34005,1 L1199.34005,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M238.340053,1 L238.340053,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M1678.34005,1 L1678.34005,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M1438.79248,1 L1438.79248,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,217 L1918.84337,217' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,865.176471 L1918.84337,865.176471' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,720.176471 L1918.84337,720.176471' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,360.176471 L1918.84337,360.176471' id='Line' opacity='0.100000001'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(50%, rgba(12, 12, 12, 0.1)), color-stop(80%, rgba(0, 0, 0, 0.15)), color-stop(85%, rgba(13, 13, 13, 0.2)), to(rgba(255, 255, 255, 0.08)));
+  background: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='100%25' height='100%25' viewBox='0 0 1921 1082' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Grids' stroke='none' stroke-width='2' fill='none' fill-rule='evenodd' stroke-linecap='square'%3E%3Cg id='Grid-/-GoldenCanonGrid-1920' transform='translate(1.000000, 0.000000)' stroke='%23242424' %3E%3Cpath d='M1.17002645,2.58823529 L1917.67335,1079.41176' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M1.17002645,2.58823529 L1917.67335,1079.41176' id='Line' opacity='0.200000003' transform='translate(959.421687, 541.000000) scale(1, -1) translate(-959.421687, -541.000000) '%3E%3C/path%3E%3Cpath d='M960.0067,2.58823529 L1918.25836,1079.41176' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M960.0067,2.58823529 L1918.25836,1079.41176' id='Line' opacity='0.200000003' transform='translate(1439.132530, 541.000000) scale(1, -1) translate(-1439.132530, -541.000000) '%3E%3C/path%3E%3Cpath d='M0.585013224,2.58823529 L958.836674,1079.41176' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M0.585013224,2.58823529 L958.836674,1079.41176' id='Line' opacity='0.200000003' transform='translate(479.710843, 541.000000) scale(1, -1) translate(-479.710843, -541.000000) '%3E%3C/path%3E%3Cpath d='M0.292682927,1.58970588 L479.707317,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M0.292682927,1.58970588 L479.707317,1079.41029' id='Line' opacity='0.200000003' transform='translate(240.000000, 540.500000) scale(1, -1) translate(-240.000000, -540.500000) '%3E%3C/path%3E%3Cpath d='M479.292507,1.58970588 L958.418337,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M479.292507,1.58970588 L958.418337,1079.41029' id='Line' opacity='0.200000003' transform='translate(718.855422, 540.500000) scale(1, -1) translate(-718.855422, -540.500000) '%3E%3C/path%3E%3Cpath d='M960.291897,1.58970588 L1438.41955,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M960.291897,1.58970588 L1438.41955,1079.41029' id='Line' opacity='0.200000003' transform='translate(1199.355723, 540.500000) scale(1, -1) translate(-1199.355723, -540.500000) '%3E%3C/path%3E%3Cpath d='M1439.29251,1.58970588 L1918.41834,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M1439.29251,1.58970588 L1918.41834,1079.41029' id='Line' opacity='0.200000003' transform='translate(1678.855422, 540.500000) scale(1, -1) translate(-1678.855422, -540.500000) '%3E%3C/path%3E%3Cpath d='M959.421687,1 L959.421687,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M479.37079,1 L479.37079,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M716.340053,1 L716.340053,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M1199.34005,1 L1199.34005,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M238.340053,1 L238.340053,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M1678.34005,1 L1678.34005,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M1438.79248,1 L1438.79248,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,217 L1918.84337,217' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,865.176471 L1918.84337,865.176471' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,720.176471 L1918.84337,720.176471' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,360.176471 L1918.84337,360.176471' id='Line' opacity='0.100000001'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(12, 12, 12, 0.1) 50%, rgba(0, 0, 0, 0.15) 80%, rgba(13, 13, 13, 0.2) 85%, rgba(255, 255, 255, 0.08) 100%);
+  background: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='100%25' height='100%25' viewBox='0 0 1921 1082' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Grids' stroke='none' stroke-width='2' fill='none' fill-rule='evenodd' stroke-linecap='square'%3E%3Cg id='Grid-/-GoldenCanonGrid-1920' transform='translate(1.000000, 0.000000)' stroke='%23242424' %3E%3Cpath d='M1.17002645,2.58823529 L1917.67335,1079.41176' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M1.17002645,2.58823529 L1917.67335,1079.41176' id='Line' opacity='0.200000003' transform='translate(959.421687, 541.000000) scale(1, -1) translate(-959.421687, -541.000000) '%3E%3C/path%3E%3Cpath d='M960.0067,2.58823529 L1918.25836,1079.41176' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M960.0067,2.58823529 L1918.25836,1079.41176' id='Line' opacity='0.200000003' transform='translate(1439.132530, 541.000000) scale(1, -1) translate(-1439.132530, -541.000000) '%3E%3C/path%3E%3Cpath d='M0.585013224,2.58823529 L958.836674,1079.41176' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M0.585013224,2.58823529 L958.836674,1079.41176' id='Line' opacity='0.200000003' transform='translate(479.710843, 541.000000) scale(1, -1) translate(-479.710843, -541.000000) '%3E%3C/path%3E%3Cpath d='M0.292682927,1.58970588 L479.707317,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M0.292682927,1.58970588 L479.707317,1079.41029' id='Line' opacity='0.200000003' transform='translate(240.000000, 540.500000) scale(1, -1) translate(-240.000000, -540.500000) '%3E%3C/path%3E%3Cpath d='M479.292507,1.58970588 L958.418337,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M479.292507,1.58970588 L958.418337,1079.41029' id='Line' opacity='0.200000003' transform='translate(718.855422, 540.500000) scale(1, -1) translate(-718.855422, -540.500000) '%3E%3C/path%3E%3Cpath d='M960.291897,1.58970588 L1438.41955,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M960.291897,1.58970588 L1438.41955,1079.41029' id='Line' opacity='0.200000003' transform='translate(1199.355723, 540.500000) scale(1, -1) translate(-1199.355723, -540.500000) '%3E%3C/path%3E%3Cpath d='M1439.29251,1.58970588 L1918.41834,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M1439.29251,1.58970588 L1918.41834,1079.41029' id='Line' opacity='0.200000003' transform='translate(1678.855422, 540.500000) scale(1, -1) translate(-1678.855422, -540.500000) '%3E%3C/path%3E%3Cpath d='M959.421687,1 L959.421687,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M479.37079,1 L479.37079,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M716.340053,1 L716.340053,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M1199.34005,1 L1199.34005,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M238.340053,1 L238.340053,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M1678.34005,1 L1678.34005,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M1438.79248,1 L1438.79248,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,217 L1918.84337,217' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,865.176471 L1918.84337,865.176471' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,720.176471 L1918.84337,720.176471' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,360.176471 L1918.84337,360.176471' id='Line' opacity='0.100000001'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(12, 12, 12, 0.1) 50%, rgba(0, 0, 0, 0.15) 80%, rgba(13, 13, 13, 0.2) 85%, rgba(255, 255, 255, 0.08) 100%);
+  background: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='100%25' height='100%25' viewBox='0 0 1921 1082' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Grids' stroke='none' stroke-width='2' fill='none' fill-rule='evenodd' stroke-linecap='square'%3E%3Cg id='Grid-/-GoldenCanonGrid-1920' transform='translate(1.000000, 0.000000)' stroke='%23242424' %3E%3Cpath d='M1.17002645,2.58823529 L1917.67335,1079.41176' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M1.17002645,2.58823529 L1917.67335,1079.41176' id='Line' opacity='0.200000003' transform='translate(959.421687, 541.000000) scale(1, -1) translate(-959.421687, -541.000000) '%3E%3C/path%3E%3Cpath d='M960.0067,2.58823529 L1918.25836,1079.41176' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M960.0067,2.58823529 L1918.25836,1079.41176' id='Line' opacity='0.200000003' transform='translate(1439.132530, 541.000000) scale(1, -1) translate(-1439.132530, -541.000000) '%3E%3C/path%3E%3Cpath d='M0.585013224,2.58823529 L958.836674,1079.41176' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M0.585013224,2.58823529 L958.836674,1079.41176' id='Line' opacity='0.200000003' transform='translate(479.710843, 541.000000) scale(1, -1) translate(-479.710843, -541.000000) '%3E%3C/path%3E%3Cpath d='M0.292682927,1.58970588 L479.707317,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M0.292682927,1.58970588 L479.707317,1079.41029' id='Line' opacity='0.200000003' transform='translate(240.000000, 540.500000) scale(1, -1) translate(-240.000000, -540.500000) '%3E%3C/path%3E%3Cpath d='M479.292507,1.58970588 L958.418337,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M479.292507,1.58970588 L958.418337,1079.41029' id='Line' opacity='0.200000003' transform='translate(718.855422, 540.500000) scale(1, -1) translate(-718.855422, -540.500000) '%3E%3C/path%3E%3Cpath d='M960.291897,1.58970588 L1438.41955,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M960.291897,1.58970588 L1438.41955,1079.41029' id='Line' opacity='0.200000003' transform='translate(1199.355723, 540.500000) scale(1, -1) translate(-1199.355723, -540.500000) '%3E%3C/path%3E%3Cpath d='M1439.29251,1.58970588 L1918.41834,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M1439.29251,1.58970588 L1918.41834,1079.41029' id='Line' opacity='0.200000003' transform='translate(1678.855422, 540.500000) scale(1, -1) translate(-1678.855422, -540.500000) '%3E%3C/path%3E%3Cpath d='M959.421687,1 L959.421687,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M479.37079,1 L479.37079,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M716.340053,1 L716.340053,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M1199.34005,1 L1199.34005,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M238.340053,1 L238.340053,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M1678.34005,1 L1678.34005,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M1438.79248,1 L1438.79248,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,217 L1918.84337,217' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,865.176471 L1918.84337,865.176471' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,720.176471 L1918.84337,720.176471' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,360.176471 L1918.84337,360.176471' id='Line' opacity='0.100000001'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E"), linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(12, 12, 12, 0.1) 50%, rgba(0, 0, 0, 0.15) 80%, rgba(13, 13, 13, 0.2) 85%, rgba(255, 255, 255, 0.08) 100%);
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-class-image {
+  bottom: 0px;
+  position: absolute;
+  width: 100%;
+  height: 319px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 90%;
+  background-size: 70% auto;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-class-image__parkour-class {
+  background: url("/wp-content/uploads/2019/09/Kevin_Speed_Vault_800x760.png") no-repeat 50% 100%/auto 90%;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-class-image__commandotemple-indoor {
+  background: url("/wp-content/uploads/2019/09/box_jump_486x700.png") no-repeat 50% 100%/auto 90%;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-class-image__beginner-outdoor {
+  background: url("/wp-content/uploads/2019/09/lizzie_cat_balance_1000x509.png") no-repeat 50% 80%/auto 80%;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-class-image__youth-class-8-12 {
+  background: url("/wp-content/uploads/2019/09/Youth_Balanced.png") no-repeat 0% 100%/auto 90%;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-class-image__parkour-free-class {
+  background: url("/wp-content/uploads/2019/09/kevin_landing_532x800.png") no-repeat 50% 100%/auto 90%;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-class-image__private-booking {
+  background: url("/wp-content/uploads/2019/09/kevin_landing_532x800.png") no-repeat 50% 100%/auto 90%;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-arrow__icon {
+  position: absolute;
+  bottom: 20px;
+  right: 26px;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-arrow__icon::after {
+  color: #ffffff;
+  font-family: "Material Icons";
+  content: "";
+  font-size: 24px;
+  vertical-align: sub;
+  display: inline-block;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child .tbk-show-more {
+  float: left;
+  color: #53A5E3;
+  font-weight: 400;
+  background: transparent;
+  border-radius: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 58px;
+  line-height: 58px;
+  padding: 0px;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child .tbk-show-more::after {
+  font-family: "Material Icons";
+  content: "";
+  font-size: 18px;
+  vertical-align: sub;
+  display: inline-block;
+}
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child .tbk-show-more:hover {
+  background-color: #53A5E3;
+  color: #ffffff;
+  transform: none;
+}
+@media (max-width: 1024px) {
+  .londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li {
+    width: 50%;
+  }
+  .londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li:nth-child(1), .londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li:nth-child(3n+1) {
+    padding-right: 14px;
+  }
+  .londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li:nth-child(2), .londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li:nth-child(3n+2) {
+    width: 50%;
+    padding-left: 15px;
+  }
+  .londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li:nth-child(3n) {
+    width: 100%;
+    padding: 0px;
+  }
+  .londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li:nth-child(3n) .tbk-slot-info {
+    padding: 29px 4.15% 0px 4.15% !important;
+  }
+  .londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li:nth-child(3n) .tbk-class-image {
+    background-size: 40% auto !important;
+  }
+}
+@media (max-width: 768px) {
+  .londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li {
+    width: 100%;
+  }
+  .londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-alert {
+    top: 0px;
+    right: 29px;
+    font-weight: 900;
+  }
+  .londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-alert__icon {
+    display: none;
+  }
+  .londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-slot-info .tbk-service-name {
+    font-size: 18px;
+  }
+  .londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li:nth-child(1n) {
+    padding: 0px;
+    width: 100%;
+  }
+  .londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li:nth-child(1n) .tbk-slot-info {
+    padding: 29px 8.33% 0px 20px !important;
+  }
+  .londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li:nth-child(1n) .tbk-class-image {
+    background-size: auto 80% !important;
+  }
+}
+.londonparkour div.calendar_main_container, .londonparkour div.calendar_widget_container {
+  margin: 0px;
+}
+.londonparkour .tbk-detail {
+  background-color: #FAFAFA;
+}
+.londonparkour .tbk-detail-wrapper {
+  height: 100%;
+  display: block;
+  float: left;
+}
+.londonparkour .tbk-detail-wrapper .ui.tbk-grid {
+  margin: 0px;
+  float: left;
+  width: 58px;
+  margin-top: 87px;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container {
+  padding: 0px;
+  height: 100%;
+  display: block;
+  float: left;
+  background: #fafafa;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-reservation-form-navigation {
+  float: left;
+  width: 8.33%;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-reservation-form-navigation .tbk-details__goback--parkour-class {
+  color: #E86546;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-reservation-form-navigation .tbk-details__goback--commandotemple-indoor {
+  color: #D0C8B3;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-reservation-form-navigation .tbk-details__goback--beginner-outdoor {
+  color: #53A5E3;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-reservation-form-navigation .tbk-details__goback--youth-class-8-12 {
+  color: #11998E;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-reservation-form-navigation .tbk-details__goback--parkour-free-class {
+  color: #E34F65;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-reservation-form-navigation .tbk-details__goback--private-booking {
+  color: #FBAB7E;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-reservation-form-navigation .tbk-details__goback--commandotemple-indoor {
+  color: #fff;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-reservation-form-navigation .tbk-details__goback i:after {
+  content: "";
+  font-size: 58px;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-reservation-form-navigation .tbk-details__goback:hover i {
+  color: #242424;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header {
+  float: left;
+  width: 67%;
+  height: 100%;
+  background-color: #fafafa;
+  color: #242424;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='100%25' height='100%25' viewBox='0 0 1921 1082' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Grids' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='square'%3E%3Cg id='Grid-/-GoldenCanonGrid-1920' transform='translate(1.000000, 0.000000)' stroke='%23242424' %3E%3Cpath d='M1.17002645,2.58823529 L1917.67335,1079.41176' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M1.17002645,2.58823529 L1917.67335,1079.41176' id='Line' opacity='0.200000003' transform='translate(959.421687, 541.000000) scale(1, -1) translate(-959.421687, -541.000000) '%3E%3C/path%3E%3Cpath d='M960.0067,2.58823529 L1918.25836,1079.41176' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M960.0067,2.58823529 L1918.25836,1079.41176' id='Line' opacity='0.200000003' transform='translate(1439.132530, 541.000000) scale(1, -1) translate(-1439.132530, -541.000000) '%3E%3C/path%3E%3Cpath d='M0.585013224,2.58823529 L958.836674,1079.41176' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M0.585013224,2.58823529 L958.836674,1079.41176' id='Line' opacity='0.200000003' transform='translate(479.710843, 541.000000) scale(1, -1) translate(-479.710843, -541.000000) '%3E%3C/path%3E%3Cpath d='M0.292682927,1.58970588 L479.707317,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M0.292682927,1.58970588 L479.707317,1079.41029' id='Line' opacity='0.200000003' transform='translate(240.000000, 540.500000) scale(1, -1) translate(-240.000000, -540.500000) '%3E%3C/path%3E%3Cpath d='M479.292507,1.58970588 L958.418337,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M479.292507,1.58970588 L958.418337,1079.41029' id='Line' opacity='0.200000003' transform='translate(718.855422, 540.500000) scale(1, -1) translate(-718.855422, -540.500000) '%3E%3C/path%3E%3Cpath d='M960.291897,1.58970588 L1438.41955,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M960.291897,1.58970588 L1438.41955,1079.41029' id='Line' opacity='0.200000003' transform='translate(1199.355723, 540.500000) scale(1, -1) translate(-1199.355723, -540.500000) '%3E%3C/path%3E%3Cpath d='M1439.29251,1.58970588 L1918.41834,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M1439.29251,1.58970588 L1918.41834,1079.41029' id='Line' opacity='0.200000003' transform='translate(1678.855422, 540.500000) scale(1, -1) translate(-1678.855422, -540.500000) '%3E%3C/path%3E%3Cpath d='M959.421687,1 L959.421687,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M479.37079,1 L479.37079,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M716.340053,1 L716.340053,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M1199.34005,1 L1199.34005,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M238.340053,1 L238.340053,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M1678.34005,1 L1678.34005,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M1438.79248,1 L1438.79248,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,217 L1918.84337,217' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,865.176471 L1918.84337,865.176471' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,720.176471 L1918.84337,720.176471' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,360.176471 L1918.84337,360.176471' id='Line' opacity='0.100000001'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header__commandotemple-indoor {
+  background-color: #D0C8B3;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header__commandotemple-indoor .tbk-details {
+  background-image: url("/wp-content/uploads/2019/03/CommandoTemple-Logo_trans.png") !important;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header__commandotemple-indoor .tbk-details__time {
+  color: #242424 !important;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-reservation-form-header {
+  margin: 0px;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details {
+  margin: 58px 0px 0px 8.33%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 185 120'%3E%3Cg id='ldnpk' fill='none'%3E%3Cpath d='M24,24 L24,96 L106.639907,96 L59.9640453,24 L24,24 Z M78.3600926,24 L125.035955,96 L161,96 L161,24 L78.3600926,24 Z' id='ldnpk' fill='%23e0e0e0' /%3E%3C/g%3E%3C/svg%3E");
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__title {
+  font-size: 5vw;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__date {
+  margin-top: 29px;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__time {
+  margin-top: 29px;
+  font-weight: 600;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__time--parkour-class {
+  color: #E86546;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__time--commandotemple-indoor {
+  color: #D0C8B3;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__time--beginner-outdoor {
+  color: #53A5E3;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__time--youth-class-8-12 {
+  color: #11998E;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__time--parkour-free-class {
+  color: #E34F65;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__time--private-booking {
+  color: #FBAB7E;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__time::before {
+  font-family: "Material Icons";
+  content: "";
+  font-size: 22px;
+  vertical-align: sub;
+  margin-right: 5px;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__today {
+  position: absolute;
+  top: 58px;
+  right: 29px;
+  text-align: center;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__today--parkour-class {
+  color: #E86546;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__today--commandotemple-indoor {
+  color: #D0C8B3;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__today--beginner-outdoor {
+  color: #53A5E3;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__today--youth-class-8-12 {
+  color: #11998E;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__today--parkour-free-class {
+  color: #E34F65;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__today--private-booking {
+  color: #FBAB7E;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__today::before {
+  font-family: "Material Icons";
+  content: "";
+  font-size: 87px;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__image {
+  width: auto;
+  height: 667px;
+  background-repeat: no-repeat;
+  background-size: 80% auto;
+  background-position: 40% 50%;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__image--parkour-class {
+  background: url("/wp-content/uploads/2019/09/Kevin_Speed_Vault_800x760.png") no-repeat 50% 100%/auto 90%;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__image--commandotemple-indoor {
+  background: url("/wp-content/uploads/2019/09/box_jump_486x700.png") no-repeat 50% 100%/auto 90%;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__image--beginner-outdoor {
+  background: url("/wp-content/uploads/2019/09/lizzie_cat_balance_1000x509.png") no-repeat 50% 80%/auto 80%;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__image--youth-class-8-12 {
+  background: url("/wp-content/uploads/2019/09/Youth_Balanced.png") no-repeat 0% 100%/auto 90%;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__image--parkour-free-class {
+  background: url("/wp-content/uploads/2019/09/kevin_landing_532x800.png") no-repeat 50% 100%/auto 90%;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__image--private-booking {
+  background: url("/wp-content/uploads/2019/09/kevin_landing_532x800.png") no-repeat 50% 100%/auto 90%;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service {
+  float: left;
+  width: 33%;
+  background-color: #FFFFFF;
+  color: #242424;
+  margin: 0px;
+  padding: 58px 3% 58px 3%;
+  height: 100%;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service-description {
+  float: left;
+  margin: 58px 0px;
+  width: 100%;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service__location {
+  text-align: center;
+  position: relative;
+  float: left;
+  width: 100%;
+  color: #FFFFFF;
+  height: 87px;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  background-image: url("/wp-content/uploads/2019/08/Screenshot-2019-08-31-at-10.31.33.png");
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service__location:hover {
+  background: #242424;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service__location .cover {
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service__location .cover--parkour-class {
+  background-color: #E86546;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service__location .cover--commandotemple-indoor {
+  background-color: #D0C8B3;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service__location .cover--beginner-outdoor {
+  background-color: #53A5E3;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service__location .cover--youth-class-8-12 {
+  background-color: #11998E;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service__location .cover--parkour-free-class {
+  background-color: #E34F65;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service__location .cover--private-booking {
+  background-color: #FBAB7E;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service__location a {
+  color: #FFFFFF;
+  line-height: 87px;
+  font-weight: 700;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service__location a::before {
+  font-family: "Material Icons";
+  content: "";
+  font-size: 22px;
+  vertical-align: sub;
+  display: inline-block;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service__price {
+  padding: 29px 0px;
+  text-align: center;
+  float: left;
+  margin: 0px 0px 0px 5%;
+  width: 45%;
+  color: #FFFFFF;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service__price--parkour-class {
+  background-color: #E86546;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service__price--commandotemple-indoor {
+  background-color: #D0C8B3;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service__price--beginner-outdoor {
+  background-color: #53A5E3;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service__price--youth-class-8-12 {
+  background-color: #11998E;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service__price--parkour-free-class {
+  background-color: #E34F65;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service__price--private-booking {
+  background-color: #FBAB7E;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .commandotemple-link {
+  float: left;
+  display: block;
+  position: relative;
+  height: 29px;
+  line-height: 29px;
+  font-size: 18px;
+  width: 100%;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form {
+  clear: both;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form .tbk-fields {
+  display: block;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form .tbk-fields .tbk-error {
+  background: #e34f65 !important;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form .tbk-fields .tbk-field {
+  margin: 0px 0px 29px 0px;
+  background: #f5f5f5;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form .tbk-fields .tbk-field input {
+  height: 58px !important;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form .tbk-fields .tbk-field input {
+  border: 0px;
+  line-height: 58px;
+  font-size: 18px;
+  background: transparent;
+  padding: 0px 29px;
+}
+@media screen and (min-width: 0\0 ) {
+  .londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form .tbk-fields .tbk-field .tbk-field-description {
+    background-color: #ffffff;
+  }
+  .londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form .tbk-fields .tbk-field .tbk-field-description__youth-class-8-12_custom_text:after, .londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form .tbk-fields .tbk-field .tbk-field-description__parkour-class_custom_text:after, .londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form .tbk-fields .tbk-field .tbk-field-description__parkour-free-class_custom_text:after, .londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form .tbk-fields .tbk-field .tbk-field-description__fullname:after {
+    content: "Fullname";
+  }
+  .londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form .tbk-fields .tbk-field .tbk-field-description__email:after {
+    content: "Email";
+  }
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form .tbk-fields .tbk-field-checkbox {
+  margin-top: 29px;
+  height: 58px;
+  background: #ffffff;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form .tbk-fields .tbk-field-checkbox > label {
+  display: none;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form .tbk-fields .tbk-field-checkbox .tbk-field-description {
+  line-height: 58px;
+  float: left;
+  margin-left: 29px;
+  font-size: 18px;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form .tbk-fields .tbk-field-checkbox .tbk-checkbox {
+  width: 58px;
+  height: 58px;
+  float: left;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form .tbk-fields .tbk-field-checkbox .tbk-checkbox input {
+  height: 58px;
+  width: 58px;
+  font-size: 58px;
+  line-height: 58px;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form .tbk-fields .tbk-field-checkbox .tbk-checkbox label {
+  background: #242424;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form .tbk-fields .tbk-field-checkbox .tbk-checkbox label:before {
+  font-family: "Material Icons";
+  height: 58px;
+  width: 58px;
+  background: #f5f5f5;
+  border: 0px;
+  font-size: 58px;
+  line-height: 58px;
+  content: "";
+  color: #ffffff;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form .tbk-fields .tbk-field-checkbox .tbk-checkbox label:after {
+  font-family: "Material Icons";
+  font-size: 58px;
+  line-height: 58px;
+  content: "";
+  color: #242424;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form-footer {
+  border-top: 0px;
+  display: block;
+  margin: 0px;
+  padding: 0px;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form-footer .tbk-tickets-price-section {
+  height: 100%;
+  margin-bottom: 29px;
+  display: block;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form-footer .tbk-tickets-price-section table {
+  height: 58px;
+  border: 0px;
+  border-spacing: 0px;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form-footer .tbk-tickets-price-section table tbody {
+  border: 0px;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form-footer .tbk-tickets-price-section table tbody tr {
+  border: 0px;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form-footer .tbk-tickets-price-section table tbody tr td {
+  border: 0px !important;
+  background: #f5f5f5;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form-footer .tbk-tickets-price-section table tbody tr td.tbk-tickets-span {
+  font-style: normal;
+  line-height: 58px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #242424;
+  background: #fff;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form-footer .tbk-tickets-price-section table tbody tr td.tbk-tickets-span * {
+  font-style: normal;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form-footer .tbk-tickets-price-section table tbody tr td.tbk-ticket-value-cell {
+  width: 20%;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form-footer .tbk-tickets-price-section table tbody tr td input.tbk-ticket-value {
+  background: #f5f5f5;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form-footer .tbk-summary-coupon {
+  padding: 0px;
+  height: 58px;
+  margin-bottom: 58px;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form-footer .tbk-summary-coupon .tbk-summary-coupon-input {
+  border: 0px;
+  height: 58px;
+  background: #f5f5f5;
+  width: 80%;
+  float: left;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form-footer .tbk-summary-coupon .tbk-button {
+  height: 58px;
+  background: #fafafa;
+  border: 0px solid #e0e0e0;
+  width: 20%;
+  text-overflow: clip;
+  padding: 0px;
+  font-weight: 400;
+  text-decoration: underline;
+}
+@media screen and (min-width: 0\0 ) {
+  .londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form-footer .tbk-summary-coupon:before {
+    background-color: #ffffff;
+    content: "Coupon Code?";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 29px;
+    display: block;
+  }
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form-footer .tbk-book-now {
+  max-height: 58px;
+  margin-bottom: 29px;
+  width: 100%;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service .tbk-reservation-form-footer .tbk-book-now .tbk-book-now-button {
+  background-color: #242424 !important;
+  margin: 0px;
+  border-radius: 0px;
+  font-size: 18px;
+  line-height: 29px;
+  width: 100%;
+  height: 58px;
+  padding: 0px;
+  text-overflow: clip;
+}
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-logged-admin-advice {
+  float: left;
+  margin: 29px 0px 0px 0px;
+  padding: 0px;
+  height: 29px;
+  border: 0px;
+  font-size: 18px;
+}
+@media all and (min-width: 0\0 ) and (min-resolution: 0.001dpcm) {
+  .londonparkour .tb-frontend-calendar .tbk-slide-canvas .tbk-inactive {
+    width: 0px \	;
+  }
+  .londonparkour .tb-frontend-calendar .tbk-slide-canvas .tbk-active {
+    width: 100% \	;
+  }
+}
+@media screen and (min-width: 0\0 ) {
+  .londonparkour .tb-frontend-calendar .tbk-radio input[type=radio],
+.londonparkour .tb-frontend-calendar .tbk-checkbox input[type=checkbox] {
+    zoom: 1.1;
+    opacity: 1 !important;
+    padding: 0px !important;
+  }
+  .londonparkour .tb-frontend-calendar .tbk-radio input[type=radio] label,
+.londonparkour .tb-frontend-calendar .tbk-checkbox input[type=checkbox] label {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header {
+    width: 50%;
+  }
+  .londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__image {
+    background-size: 90% auto !important;
+  }
+  .londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header {
+    width: 100%;
+  }
+  .londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__image {
+    height: 116px;
+    background-size: auto 80% !important;
+    margin-bottom: 29px;
+  }
+  .londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service {
+    width: 100%;
+  }
+}
+.londonparkour .calendar_main_container .tbk-payment-wrapper {
+  background-color: #f5f5f5;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='100%25' height='100%25' viewBox='0 0 1921 1082' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Grids' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='square'%3E%3Cg id='Grid-/-GoldenCanonGrid-1920' transform='translate(1.000000, 0.000000)' stroke='%23242424' %3E%3Cpath d='M1.17002645,2.58823529 L1917.67335,1079.41176' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M1.17002645,2.58823529 L1917.67335,1079.41176' id='Line' opacity='0.200000003' transform='translate(959.421687, 541.000000) scale(1, -1) translate(-959.421687, -541.000000) '%3E%3C/path%3E%3Cpath d='M960.0067,2.58823529 L1918.25836,1079.41176' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M960.0067,2.58823529 L1918.25836,1079.41176' id='Line' opacity='0.200000003' transform='translate(1439.132530, 541.000000) scale(1, -1) translate(-1439.132530, -541.000000) '%3E%3C/path%3E%3Cpath d='M0.585013224,2.58823529 L958.836674,1079.41176' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M0.585013224,2.58823529 L958.836674,1079.41176' id='Line' opacity='0.200000003' transform='translate(479.710843, 541.000000) scale(1, -1) translate(-479.710843, -541.000000) '%3E%3C/path%3E%3Cpath d='M0.292682927,1.58970588 L479.707317,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M0.292682927,1.58970588 L479.707317,1079.41029' id='Line' opacity='0.200000003' transform='translate(240.000000, 540.500000) scale(1, -1) translate(-240.000000, -540.500000) '%3E%3C/path%3E%3Cpath d='M479.292507,1.58970588 L958.418337,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M479.292507,1.58970588 L958.418337,1079.41029' id='Line' opacity='0.200000003' transform='translate(718.855422, 540.500000) scale(1, -1) translate(-718.855422, -540.500000) '%3E%3C/path%3E%3Cpath d='M960.291897,1.58970588 L1438.41955,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M960.291897,1.58970588 L1438.41955,1079.41029' id='Line' opacity='0.200000003' transform='translate(1199.355723, 540.500000) scale(1, -1) translate(-1199.355723, -540.500000) '%3E%3C/path%3E%3Cpath d='M1439.29251,1.58970588 L1918.41834,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M1439.29251,1.58970588 L1918.41834,1079.41029' id='Line' opacity='0.200000003' transform='translate(1678.855422, 540.500000) scale(1, -1) translate(-1678.855422, -540.500000) '%3E%3C/path%3E%3Cpath d='M959.421687,1 L959.421687,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M479.37079,1 L479.37079,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M716.340053,1 L716.340053,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M1199.34005,1 L1199.34005,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M238.340053,1 L238.340053,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M1678.34005,1 L1678.34005,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M1438.79248,1 L1438.79248,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,217 L1918.84337,217' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,865.176471 L1918.84337,865.176471' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,720.176471 L1918.84337,720.176471' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,360.176471 L1918.84337,360.176471' id='Line' opacity='0.100000001'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.londonparkour .calendar_main_container .tbk-payment-wrapper .tbk-grid {
+  height: 58px;
+}
+.londonparkour .calendar_main_container .tbk-payment-wrapper .tbk-grid .tbk-back-to {
+  height: 58px;
+}
+.londonparkour .calendar_main_container .tbk-payment-wrapper .tbk-grid .tbk-back-to .dashicons:before {
+  font-family: "Material Icons";
+  content: "";
+  font-size: 58px;
+  vertical-align: sub;
+  margin-right: 5px;
+  color: #242424;
+}
+.londonparkour .calendar_main_container .tbk-payment-wrapper .tbk-grid .tbk-column {
+  color: #242424;
+  font-family: "Open Sans";
+  line-height: 58px;
+  height: 58px;
+}
+.londonparkour .calendar_main_container .tbk-payment-wrapper .tbk-payment-form-collect form .tbk-creditcard {
+  height: 0px;
+  padding-top: 32%;
+  width: 50%;
+  min-width: 600px;
+  min-height: 384px;
+  margin: 0px 25%;
+  position: relative;
+  border-radius: 20px;
+  background-color: #424242;
+  /* masteercard logo */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='155.58' %3E%3Cg transform='translate(1565.7 -1106.8)'%3E%3Cg transform='matrix(3.1437 0 0 3.1437 -4835.7 -1027.6)'%3E%3Cpath d='m1080.6 714.05h-17.202v-30.915h17.202z' fill='%23ff5f00'/%3E%3Cg transform='matrix(1.25 0 0 -1.25 1064.5 698.59)'%3E%3Cpath d='m0 0c0 5.017 2.349 9.486 6.007 12.366-2.675 2.106-6.051 3.363-9.72 3.363-8.686 0-15.727-7.042-15.727-15.729s7.041-15.729 15.727-15.729c3.669 0 7.045 1.257 9.72 3.363-3.658 2.88-6.007 7.349-6.007 12.366' fill='%23eb001b'/%3E%3C/g%3E%3Cg transform='matrix(1.25 0 0 -1.25 1103.8 698.59)'%3E%3Cpath d='m0 0c0-8.687-7.041-15.729-15.727-15.729-3.669 0-7.045 1.257-9.721 3.363 3.659 2.88 6.008 7.349 6.008 12.366s-2.349 9.486-6.008 12.366c2.676 2.106 6.052 3.363 9.721 3.363 8.686 0 15.727-7.042 15.727-15.729' fill='%23f79e1b'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 40px auto;
+  background-position: 90% 10%;
+}
+.londonparkour .calendar_main_container .tbk-payment-wrapper .tbk-payment-form-collect form .tbk-creditcard .tbk-creditcard-details {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  padding: 5%;
+}
+.londonparkour .calendar_main_container .tbk-payment-wrapper .tbk-payment-form-collect form .tbk-creditcard .tbk-creditcard-details input {
+  font-family: Courier, monospace;
+}
+.londonparkour .calendar_main_container .tbk-payment-wrapper .tbk-payment-form-collect form .tbk-creditcard .tbk-creditcard-details input.tbk-cc-num {
+  background: transparent;
+  border: yellow 1px solid;
+  padding: 20px 20px;
+  color: #fff;
+}
+.londonparkour .calendar_main_container .tbk-payment-wrapper .tbk-payment-form-collect form .tbk-creditcard .tbk-creditcard-details label {
+  color: #ffffff;
+}
+.londonparkour .calendar_main_container .tbk-payment-wrapper .tbk-payment-form-collect form .tbk-powered-by {
+  margin: 29px 0px 29px 0px;
+  color: #242424;
+  line-height: 29px;
+  font-size: 18px;
+  overflow-wrap: normal;
+  white-space: normal;
+}
+.londonparkour .calendar_main_container .tbk-payment-wrapper .tbk-payment-form-collect form .tbk-submit {
+  font-size: 18px;
+  line-height: 58px;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 0px;
+}
+@media (max-width: 1024px) {
+  .londonparkour .tbk-payment-form-collect form .tbk-creditcard {
+    margin: 0px !important;
+  }
+}
+@media (max-width: 768px) {
+  .londonparkour .tbk-grid .tbk-column {
+    font-size: 18px;
+  }
+  .londonparkour .tbk-payment-form-collect form .tbk-creditcard {
+    min-width: 100% !important;
+    min-height: 400px !important;
+  }
+  .londonparkour .tbk-payment-form-collect form .tbk-creditcard input.tbk-cc-num {
+    background-image: none !important;
+  }
+}
+.londonparkour .tbk-slide-container .tbk-slide-canvas .tbk-slide .tbk-reservation-done-navigation div {
+  font-family: "Open Sans";
+  line-height: 58px;
+  color: #242424;
+  height: 58px;
+}
+.londonparkour .tbk-slide-container .tbk-slide-canvas .tbk-slide .tbk-slide-body {
+  padding: 29px;
+}
+.londonparkour .tbk-slide-container .tbk-slide-canvas .tbk-slide .tbk-slide-body .positive,
+.londonparkour .tbk-slide-container .tbk-slide-canvas .tbk-slide .tbk-slide-body .tbk-positive-message-form {
+  margin: 29px 0px;
+  padding: 29px;
+  font-family: "Open Sans";
+  line-height: 58px;
+  font-size: 29px;
+  box-shadow: none;
+  background-color: #38EF7D;
+  color: #11998E;
+}
+.londonparkour .tbk-slide-container .tbk-slide-canvas .tbk-slide .tbk-slide-body .positive .tbk-message-header,
+.londonparkour .tbk-slide-container .tbk-slide-canvas .tbk-slide .tbk-slide-body .tbk-positive-message-form .tbk-message-header {
+  margin: 0px;
+}
+.londonparkour .tbk-slide-container .tbk-slide-canvas .tbk-slide .tbk-slide-body .positive p,
+.londonparkour .tbk-slide-container .tbk-slide-canvas .tbk-slide .tbk-slide-body .tbk-positive-message-form p {
+  margin: 0px;
+  padding: 0px;
+  color: #11998E;
+}
+.londonparkour .tbk-slide-container .tbk-slide-canvas .tbk-slide .tbk-slide-body .tbk-after-reservation-actions button {
+  font-size: 18px;
+  line-height: 29px;
+  padding: 14px 29px 15px 29px;
+  border-radius: 0px;
+  margin: 0px;
+  height: 58px;
+}
+.londonparkour .tbk-slide-container .tbk-slide-canvas .tbk-slide .tbk-slide-body .tbk-after-reservation-actions button .tbk-green {
+  background: 27C9C1;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,75 @@
+/* Team Booking Redesign Style */
+
+/*
+    *  SLIDE 4 - Payment Wrapper
+*/
+
+        /* Main Container */
+        .calendar_main_container .tbk-payment-wrapper {
+            
+        }
+            .calendar_main_container .tbk-payment-wrapper .tbk-resevation-review-navigation {
+                height: 105px;
+                color: #242424;  
+            }
+                    .calendar_main_container .tbk-payment-wrapper .tbk-resevation-review-navigation .tbk-navigation-header-emphasis {
+                        color: #ffffff;
+                        padding-left: 10px;
+                    }
+
+                    .calendar_main_container .tbk-payment-wrapper .tbk-resevation-review-navigation .tbk-column{
+                        display: flex !important;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                            .calendar_main_container .tbk-payment-wrapper .tbk-resevation-review-navigation .tbk-column span.dashicons {
+                                display: inherit;
+                                padding: 0px;
+                            }
+                            .calendar_main_container .tbk-payment-wrapper .tbk-resevation-review-navigation .tbk-schedule-date {
+                                font-family: inherit;
+                                font-weight: 600;
+                            }
+
+                    /* 
+                    * INDOOR 
+                    */
+                    .calendar_main_container .tbk-payment-parkour-class .tbk-resevation-review-navigation {
+                        background-color: #38EF7D;
+                        background: linear-gradient(30deg, #11998E 0%, #38EF7D 100%);
+                    }
+                    /* 
+                    * OUTDOOR 
+                    */
+                    .calendar_main_container .tbk-payment-beginner-outdoor .tbk-resevation-review-navigation {
+                        background-color: #0093E9;
+                        background: linear-gradient(30deg, #0093E9 0%, #80D0C7 100%);
+                    }
+                    /* 
+                    * YOUTH 
+                    */
+                    .calendar_main_container .tbk-payment-youth-class-8-12 .tbk-resevation-review-navigation {
+                        background-color: #5F0A87;
+                        background: linear-gradient(30deg, #5F0A87 0%, #A4508B 100%);
+                    }
+                    /* 
+                    * FREE 
+                    */
+                    .calendar_main_container .tbk-payment-parkour-free-class .tbk-resevation-review-navigation {
+                        background-color: #E86546;
+                        background: linear-gradient(30deg, #E86546 0%, #E34F65 100%);
+                    }
+                    /* 
+                    * PRIVATE 
+                    */
+                    .calendar_main_container .tbk-payment-private-booking .tbk-resevation-review-navigation {
+                        background-color: #FBAB7E;
+                        background: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+                    }
+                    /* 
+                    * COMMANDOTEMPLE 
+                    */
+                    .calendar_main_container .tbk-payment-commandotemple-indoor .tbk-resevation-review-navigation {
+                        background-color: #D0C8B3;
+                        background: linear-gradient(62deg, #D0C8B3 0%, #797161 100%);
+                    }

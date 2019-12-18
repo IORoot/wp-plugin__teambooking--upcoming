@@ -1,0 +1,71 @@
+/* Team Booking Redesign Style */
+
+/*
+*  SLIDE 1 - ALL SLOTS - TABLET
+*/
+$tablet: 1024px;
+
+/* Override defaults */ 
+
+@media (max-width: $tablet) {
+
+    //  ┌────────────────────────────────────────────────┐
+    //  │           Main 'Upcoming' Container            │
+    //  └────────────────────────────────────────────────┘
+    .tb-frontend-calendar {
+        
+        //  ┌────────────────────────────────────────────────┐
+        //  │            The viewable canvas area            │
+        //  └────────────────────────────────────────────────┘
+        .tbk-slide-canvas {
+
+            //  ┌────────────────────────────────────────────────┐
+            //  │                   All slides                   │
+            //  └────────────────────────────────────────────────┘
+            .tbk-slide {
+
+                //  ┌────────────────────────────────────────────────┐
+                //  │      Specifically the first slide = SLOTS      │
+                //  └────────────────────────────────────────────────┘
+                &:first-child {
+
+                    ul {
+
+                        li {
+                            
+                            width: 50%;
+
+                            // First Column
+                            &:nth-child(1) ,
+                            &:nth-child(3n + 1) {
+                                padding-right: 14px;  
+                            } 
+
+                                // Middle Column
+                                &:nth-child(2),
+                                &:nth-child(3n + 2) {
+                                width: 50%;
+                                padding-left: 15px;
+                            }
+
+                            // Right Column
+                            &:nth-child(3n) {
+                                width: 100%;
+                                padding: 0px;
+
+                                .tbk-slot-info {
+                                    padding: 29px 4.15% 0px 4.15% !important;
+                                }
+                                .tbk-class-image {
+                                    background-size: 40% auto !important;
+                                }
+                            }
+
+                        }
+                    }  
+                }
+            }
+        }
+    }
+    
+}

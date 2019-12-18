@@ -1,0 +1,38 @@
+/*
+*  SLIDE 2 - DETAILS - MOBILE
+*/
+$mobile: 768px;
+
+/* Override defaults */ 
+
+@media (max-width: $mobile) {
+
+
+        .tbk-detail-wrapper {
+
+            .tbk-reservation-form-container {
+            
+                //  ┌────────────────────────────────────────────────┐
+                //  │                   Split 100%                   │
+                //  └────────────────────────────────────────────────┘
+                .tbk-class-header {
+                    width: 100%;
+
+                    .tbk-details {
+
+                        &__image {
+                            height: 116px;
+                            background-size: auto 80% !important;
+                            margin-bottom: 29px;
+                        }
+                    }
+                }
+                .tbk-service {
+                    width: 100%;
+                }
+            
+            }
+            
+        }
+
+}

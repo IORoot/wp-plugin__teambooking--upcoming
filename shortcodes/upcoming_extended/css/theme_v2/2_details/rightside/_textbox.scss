@@ -1,0 +1,39 @@
+//  ┌────────────────────────────────────────────────┐
+//  │                TEXT INPUTs                     │
+//  └────────────────────────────────────────────────┘
+input {
+    border: 0px;
+    line-height: 58px;
+    font-size: 18px;
+    background: transparent;
+    padding: 0px 29px;
+}
+
+
+
+
+//  █████████████████████████████████████████████
+//  █████████████ IE 9+ Browserhack █████████████
+//  █████████████████████████████████████████████  
+@media screen and (min-width:0\0) {
+
+    .tbk-field-description {
+        
+        background-color: #ffffff;
+
+        &__youth-class-8-12_custom_text,
+        &__parkour-class_custom_text,
+        &__parkour-free-class_custom_text,
+        &__fullname {
+            &:after {
+                content: "Fullname";
+            }
+        }
+
+        &__email {
+            &:after {
+                content: "Email";
+            }
+        }
+    }
+}  

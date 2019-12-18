@@ -1,0 +1,33 @@
+/*
+*  SLIDE 2 - DETAILS - TABLET
+*/
+$tablet: 1024px;
+
+/* Override defaults */ 
+
+@media (max-width: $tablet) {
+        .tbk-detail-wrapper {
+
+            .tbk-reservation-form-container {
+            
+                //  ┌────────────────────────────────────────────────┐
+                //  │                Split 50% / 50%                 │
+                //  └────────────────────────────────────────────────┘
+                .tbk-class-header {
+                    width: 50%;
+
+                    .tbk-details {
+                        &__image {
+                            background-size: 90% auto !important;
+                        }
+                    }
+                }
+                .tbk-service {
+                    width: 50%;
+                }
+            
+            }
+            
+        }
+
+}

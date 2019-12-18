@@ -1,0 +1,92 @@
+//  ┌────────────────────────────────────────────────┐
+//  │         Title, description & metaboxes         │
+//  └────────────────────────────────────────────────┘
+.tbk-class-header {
+
+    float: left;
+    width: 67%;
+    height: 100%;
+    background-color: #fafafa;
+    color: #242424;
+
+    &__commandotemple-indoor {
+        background-color: #D0C8B3;
+        .tbk-details {
+            background-image: url("/wp-content/uploads/2019/03/CommandoTemple-Logo_trans.png") !important;
+        
+            &__time {
+                color: #242424 !important;
+            }
+        }
+    }
+
+    @include goldenGrid(1);
+
+        //  ┌────────────────────────────────────────────────┐
+        //  │              Title & Description               │
+        //  └────────────────────────────────────────────────┘
+        .tbk-reservation-form-header {
+            margin: 0px;
+        }
+
+        //  ┌────────────────────────────────────────────────┐
+        //  │              LEFT-SIDE : Details               │
+        //  └────────────────────────────────────────────────┘
+        .tbk-details {
+
+            margin: 58px 0px 0px 8.33%;
+            position: relative;
+
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 185 120'%3E%3Cg id='ldnpk' fill='none'%3E%3Cpath d='M24,24 L24,96 L106.639907,96 L59.9640453,24 L24,24 Z M78.3600926,24 L125.035955,96 L161,96 L161,24 L78.3600926,24 Z' id='ldnpk' fill='%23e0e0e0' /%3E%3C/g%3E%3C/svg%3E");
+
+            &__title {
+                font-size: 5vw;
+            }
+
+            &__date {
+                margin-top: 29px;
+            }
+
+            &__time {
+                margin-top: 29px;
+                font-weight: 600;
+
+                @include classcolours('color', '--');
+
+                &::before {
+                    font-family: "Material Icons";
+                    content: '\e192';
+                    font-size: 22px;
+                    vertical-align: sub;
+                    margin-right: 5px;
+                }
+            }
+
+            &__today {
+                position: absolute;
+                top: 58px;
+                right: 29px;
+                text-align: center;
+
+                @include classcolours('color', '--');
+                
+                &::before {
+                    font-family: "Material Icons";
+                    content: '\e838';
+                    font-size: 87px;
+                }
+            }
+
+            &__image {
+                width: auto;
+                height: 667px;
+                background-repeat: no-repeat;
+                background-size: 80% auto;
+                background-position: 40% 50%;
+
+                @include classBackgrounds('background', '--');
+            }
+        }
+}

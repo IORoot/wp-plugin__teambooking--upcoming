@@ -1,0 +1,72 @@
+/* Team Booking Redesign Style */
+
+/*
+    *  SLIDE 5 - Thank You
+*/
+
+
+    .tbk-slide-container {
+
+        .tbk-slide-canvas
+        {
+            
+            .tbk-slide {
+        
+                .tbk-reservation-done-navigation div {
+                    font-family: "Open Sans";
+                    line-height: 58px;
+                    color: #242424;    
+                    height: 58px;
+                }
+            
+        
+                .tbk-slide-body {
+                    padding: 29px; 
+        
+                    //  ┌────────────────────────────────────────────────┐
+                    //  │                Success Message                 │
+                    //  └────────────────────────────────────────────────┘
+                    .positive,
+                    .tbk-positive-message-form {
+                        margin: 29px 0px;
+                        padding: 29px;
+                        font-family: "Open Sans";
+                        line-height: 58px;
+                        font-size: 29px;
+                        box-shadow: none;
+                        background-color: #38EF7D;
+                        color: #11998E;
+        
+                        .tbk-message-header {
+                            margin: 0px;
+                        }
+        
+                        p {
+                            margin: 0px;
+                            padding: 0px;
+                            color: #11998E;
+                        }
+                    }
+        
+                    //  ┌────────────────────────────────────────────────┐
+                    //  │                    Buttons                     │
+                    //  └────────────────────────────────────────────────┘
+                    .tbk-after-reservation-actions {
+        
+                        button {
+                            font-size: 18px;
+                            line-height: 29px;
+                            padding: 14px 29px 15px 29px;
+                            border-radius: 0px;
+                            margin: 0px;
+                            height: 58px;
+
+                            .tbk-green {
+                                background: 27C9C1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }

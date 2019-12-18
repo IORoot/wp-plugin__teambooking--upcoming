@@ -1,0 +1,82 @@
+/* Team Booking Redesign Style */
+
+/*
+*  SLIDE 1 - ALL SLOTS - MOBILE
+*/
+$mobile: 768px;
+
+/* Override defaults */ 
+
+@media (max-width: $mobile) {
+
+    //  ┌────────────────────────────────────────────────┐
+    //  │           Main 'Upcoming' Container            │
+    //  └────────────────────────────────────────────────┘
+    .tb-frontend-calendar {
+        
+        //  ┌────────────────────────────────────────────────┐
+        //  │            The viewable canvas area            │
+        //  └────────────────────────────────────────────────┘
+        .tbk-slide-canvas {
+
+            //  ┌────────────────────────────────────────────────┐
+            //  │                   All slides                   │
+            //  └────────────────────────────────────────────────┘
+            .tbk-slide {
+
+                //  ┌────────────────────────────────────────────────┐
+                //  │      Specifically the first slide = SLOTS      │
+                //  └────────────────────────────────────────────────┘
+                &:first-child {
+
+                    ul {
+
+                        li {
+                            
+                            
+                            .tbk-slot-wrapper {
+                                .tbk-upcoming-slot {
+                                    //  ┌─────────────────────────────────────────────────────────────────────────┐
+                                    //  │                           TODAY! icon & text                            │
+                                    //  └─────────────────────────────────────────────────────────────────────────┘
+                                    .tbk-alert {
+                                        top: 0px;
+                                        right: 29px;
+                                        font-weight: 900;
+                                    }
+                                    .tbk-alert__icon {
+                                        display: none;
+                                    }
+                                    .tbk-slot-info {
+                                        //  ┌─────────────────────────────────────────────────────────────────────────┐
+                                        //  │                               Class Title                               │
+                                        //  └─────────────────────────────────────────────────────────────────────────┘
+                                        .tbk-service-name {
+                                            font-size: 18px;
+                                        }
+                                    }
+                                }
+                            }
+                            
+
+                            width: 100%;
+
+                            &:nth-child(1n){
+                                padding: 0px;
+                                width: 100%;
+
+                                .tbk-slot-info {
+                                    padding: 29px 8.33% 0px 20px !important;
+                                }
+                                .tbk-class-image {
+                                    background-size: auto 80% !important;
+                                }
+                            }  
+                        }
+                    }  
+                }
+            }
+        }
+    }
+    
+}

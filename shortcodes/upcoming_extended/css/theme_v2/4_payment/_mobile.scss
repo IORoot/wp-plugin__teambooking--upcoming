@@ -1,0 +1,30 @@
+/*
+*  SLIDE 2 - DETAILS - MOBILE
+*/
+$mobile: 768px;
+
+/* Override defaults */ 
+
+@media (max-width: $mobile) {
+
+    .tbk-grid {
+        .tbk-column {
+            font-size: 18px;
+        }
+    }
+
+    .tbk-payment-form-collect {
+
+        form {
+            .tbk-creditcard {
+                min-width: 100% !important;
+                min-height: 400px !important;
+
+                input.tbk-cc-num {
+                    background-image: none !important;
+                }
+            }
+        }
+    } 
+    
+}

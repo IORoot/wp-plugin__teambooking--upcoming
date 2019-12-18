@@ -1,0 +1,135 @@
+/* Team Booking Redesign Style */
+
+/*
+    *  SLIDE 4 - Payment Wrapper
+*/
+
+
+
+/* Main Container */
+.calendar_main_container .tbk-payment-wrapper {
+    
+    background-color: #f5f5f5;
+
+    @include goldenGrid(1);
+
+
+    //  ┌────────────────────────────────────────────────┐
+    //  │                 Header & arrow                 │
+    //  └────────────────────────────────────────────────┘
+    .tbk-grid {
+
+        height: 58px;
+
+        //  ┌────────────────────────────────────────────────┐
+        //  │                  Go Back Icon                  │
+        //  └────────────────────────────────────────────────┘
+        .tbk-back-to {
+
+            height: 58px;
+
+            .dashicons {
+                &:before {
+                    font-family: "Material Icons";
+                    content:'\e5cb';
+                    font-size: 58px;
+                    vertical-align: sub;
+                    margin-right: 5px;
+                    color: #242424;
+                }  
+            }
+        }
+
+        .tbk-column {
+
+            color: #242424;
+            font-family: "Open Sans";
+            line-height: 58px;
+            height: 58px;
+        }
+
+    }
+
+    //  ┌────────────────────────────────────────────────┐
+    //  │              Credit Card Details               │
+    //  └────────────────────────────────────────────────┘
+    .tbk-payment-form-collect {
+
+        form {
+
+            .tbk-creditcard {
+                
+                height: 0px;
+                padding-top: 32%;
+                width: 50%;
+                min-width: 600px;
+                min-height: 384px;
+                margin: 0px 25%;
+                position: relative;
+                border-radius: 20px;
+
+                background-color: #424242;
+
+                /* masteercard logo */
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='155.58' %3E%3Cg transform='translate(1565.7 -1106.8)'%3E%3Cg transform='matrix(3.1437 0 0 3.1437 -4835.7 -1027.6)'%3E%3Cpath d='m1080.6 714.05h-17.202v-30.915h17.202z' fill='%23ff5f00'/%3E%3Cg transform='matrix(1.25 0 0 -1.25 1064.5 698.59)'%3E%3Cpath d='m0 0c0 5.017 2.349 9.486 6.007 12.366-2.675 2.106-6.051 3.363-9.72 3.363-8.686 0-15.727-7.042-15.727-15.729s7.041-15.729 15.727-15.729c3.669 0 7.045 1.257 9.72 3.363-3.658 2.88-6.007 7.349-6.007 12.366' fill='%23eb001b'/%3E%3C/g%3E%3Cg transform='matrix(1.25 0 0 -1.25 1103.8 698.59)'%3E%3Cpath d='m0 0c0-8.687-7.041-15.729-15.727-15.729-3.669 0-7.045 1.257-9.721 3.363 3.659 2.88 6.008 7.349 6.008 12.366s-2.349 9.486-6.008 12.366c2.676 2.106 6.052 3.363 9.721 3.363 8.686 0 15.727-7.042 15.727-15.729' fill='%23f79e1b'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-size: 40px auto;
+                background-position: 90% 10%;
+
+                .tbk-creditcard-details {
+                    position: absolute;
+                    top: 50%;
+                    -webkit-transform: translateY(-50%);
+                    -ms-transform: translateY(-50%);
+                    -o-transform: translateY(-50%);
+                        transform: translateY(-50%);
+
+                    left: 0;
+                    width: 100%;
+                    padding: 5%;
+
+                    input {
+                        font-family: Courier, monospace;
+
+                        &.tbk-cc-num {
+                            background: transparent;
+                            border: yellow 1px solid;
+                            padding: 20px 20px;
+                            color: #fff;
+                        }
+                    }
+
+                    label {
+                        color: #ffffff;
+                    }
+                }
+            }
+
+            .tbk-powered-by {
+                margin: 29px 0px 29px 0px;
+                color: #242424;
+                line-height: 29px;
+                font-size: 18px;
+                overflow-wrap: normal;
+                white-space: normal;
+            }
+
+            .tbk-submit {
+                font-size: 18px;
+                line-height: 58px;
+                padding: 0px;
+                margin: 0px;
+                border-radius: 0px;
+            }
+
+
+        }
+    }
+
+}
+
+
+
+@import "tablet";
+
+@import "mobile";

@@ -1,0 +1,83 @@
+/* Team Booking Redesign Style */
+
+/*
+    *  SLIDE 2 - Detail Wrapper
+*/
+
+
+div.calendar_main_container, div.calendar_widget_container {
+    margin: 0px;
+}
+
+// background colour of each class. .tbk-detail__parkour-indoor
+.tbk-detail {
+    background-color: #FAFAFA; 
+}
+
+.tbk-detail-wrapper {
+    height: 100%;
+    display: block;
+    float: left;
+
+    //  ┌────────────────────────────────────────────────┐
+    //  │                Navigation back                 │
+    //  └────────────────────────────────────────────────┘
+    .ui.tbk-grid {
+        margin: 0px;
+        float: left;
+        width: 58px;
+        margin-top: 87px;
+    }
+
+    //  ┌────────────────────────────────────────────────┐
+    //  │                  Main Content                  │
+    //  └────────────────────────────────────────────────┘
+    .tbk-reservation-form-container {
+
+            padding: 0px;
+            height: 100%;
+            display: block;
+            float: left;
+            background: #fafafa;
+
+            //  ┌───────────────────────────────────────────┐ 
+            //  │                                           │░
+            //  │             Go back to slots              │░
+            //  │                                           │░
+            //  └───────────────────────────────────────────┘░
+            //   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+            @import "leftside/goback";
+
+            //  ┌───────────────────────────────────────────┐ 
+            //  │                                           │░
+            //  │        Title / Date / Time / Image        │░
+            //  │                                           │░
+            //  └───────────────────────────────────────────┘░
+            //   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+            @import "leftside/leftside";
+            
+            //  ┌───────────────────────────────────────────┐ 
+            //  │                                           │░
+            //  │       Location / Description / Form       │░
+            //  │                                           │░
+            //  └───────────────────────────────────────────┘░
+            //   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+            @import "rightside/rightside";
+
+        .tbk-logged-admin-advice {
+            float: left;
+            margin: 29px 0px 0px 0px;
+            padding: 0px;
+            height: 29px;
+            border: 0px;
+            font-size: 18px;
+        } 
+    }
+}
+     
+
+@import "overrides";
+
+@import "tablet";
+
+@import "mobile";

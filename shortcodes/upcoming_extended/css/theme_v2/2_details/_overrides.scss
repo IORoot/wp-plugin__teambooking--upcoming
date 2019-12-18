@@ -1,0 +1,35 @@
+
+    //  ███████████████████████████████████████
+    //  █████████████  IE 9 ONLY  █████████████
+    //  ███████████████████████████████████████  
+    @media all and (min-width:0\0) and (min-resolution:0.001dpcm) {
+        .tb-frontend-calendar {
+            .tbk-slide-canvas {
+                .tbk-inactive {
+                    width: 0px \9;
+                }
+                .tbk-active {
+                    width: 100% \9;
+                } 
+            }
+        }
+    } 
+    
+
+    //  █████████████████████████████████████████████
+    //  █████████████ IE 9+ Browserhack █████████████
+    //  █████████████████████████████████████████████  
+    @media screen and (min-width:0\0) {
+
+        .tb-frontend-calendar .tbk-radio input[type=radio], 
+        .tb-frontend-calendar .tbk-checkbox input[type=checkbox] {
+
+            zoom: 1.1;
+            opacity:1 !important;
+            padding: 0px !important; 
+
+            label {
+                display: none;
+            }
+        }
+    } 

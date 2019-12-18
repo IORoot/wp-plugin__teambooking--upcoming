@@ -1,0 +1,60 @@
+$colour_beginnerIndoor: #E86546;
+$colour_commandoTemple: #D0C8B3;
+$colour_beginnerOutdoor: #53A5E3;
+$colour_youthParkour: #11998E;
+$colour_freeClass: #E34F65;
+$colour_privateBooking: #FBAB7E;
+
+$image_beginnerIndoor: url("/wp-content/uploads/2019/09/Kevin_Speed_Vault_800x760.png") no-repeat 50% 100%/auto 90%;
+$image_commandoTemple: url("/wp-content/uploads/2019/09/box_jump_486x700.png") no-repeat 50% 100%/auto 90%;
+$image_beginnerOutdoor:  url('/wp-content/uploads/2019/09/lizzie_cat_balance_1000x509.png') no-repeat 50% 80%/auto 80%;
+$image_youthParkour: url("/wp-content/uploads/2019/09/Youth_Balanced.png") no-repeat 0% 100%/auto 90%;
+$image_freeClass: url("/wp-content/uploads/2019/09/kevin_landing_532x800.png")no-repeat 50% 100%/auto 90%;
+$image_privateBooking: url("/wp-content/uploads/2019/09/kevin_landing_532x800.png")no-repeat 50% 100%/auto 90%;
+
+// standard grid.
+$gridSVG: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='100%25' height='100%25' viewBox='0 0 1921 1082' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Grids' stroke='none' stroke-width='2' fill='none' fill-rule='evenodd' stroke-linecap='square'%3E%3Cg id='Grid-/-GoldenCanonGrid-1920' transform='translate(1.000000, 0.000000)' stroke='%23242424' %3E%3Cpath d='M1.17002645,2.58823529 L1917.67335,1079.41176' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M1.17002645,2.58823529 L1917.67335,1079.41176' id='Line' opacity='0.200000003' transform='translate(959.421687, 541.000000) scale(1, -1) translate(-959.421687, -541.000000) '%3E%3C/path%3E%3Cpath d='M960.0067,2.58823529 L1918.25836,1079.41176' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M960.0067,2.58823529 L1918.25836,1079.41176' id='Line' opacity='0.200000003' transform='translate(1439.132530, 541.000000) scale(1, -1) translate(-1439.132530, -541.000000) '%3E%3C/path%3E%3Cpath d='M0.585013224,2.58823529 L958.836674,1079.41176' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M0.585013224,2.58823529 L958.836674,1079.41176' id='Line' opacity='0.200000003' transform='translate(479.710843, 541.000000) scale(1, -1) translate(-479.710843, -541.000000) '%3E%3C/path%3E%3Cpath d='M0.292682927,1.58970588 L479.707317,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M0.292682927,1.58970588 L479.707317,1079.41029' id='Line' opacity='0.200000003' transform='translate(240.000000, 540.500000) scale(1, -1) translate(-240.000000, -540.500000) '%3E%3C/path%3E%3Cpath d='M479.292507,1.58970588 L958.418337,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M479.292507,1.58970588 L958.418337,1079.41029' id='Line' opacity='0.200000003' transform='translate(718.855422, 540.500000) scale(1, -1) translate(-718.855422, -540.500000) '%3E%3C/path%3E%3Cpath d='M960.291897,1.58970588 L1438.41955,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M960.291897,1.58970588 L1438.41955,1079.41029' id='Line' opacity='0.200000003' transform='translate(1199.355723, 540.500000) scale(1, -1) translate(-1199.355723, -540.500000) '%3E%3C/path%3E%3Cpath d='M1439.29251,1.58970588 L1918.41834,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M1439.29251,1.58970588 L1918.41834,1079.41029' id='Line' opacity='0.200000003' transform='translate(1678.855422, 540.500000) scale(1, -1) translate(-1678.855422, -540.500000) '%3E%3C/path%3E%3Cpath d='M959.421687,1 L959.421687,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M479.37079,1 L479.37079,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M716.340053,1 L716.340053,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M1199.34005,1 L1199.34005,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M238.340053,1 L238.340053,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M1678.34005,1 L1678.34005,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M1438.79248,1 L1438.79248,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,217 L1918.84337,217' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,865.176471 L1918.84337,865.176471' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,720.176471 L1918.84337,720.176471' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,360.176471 L1918.84337,360.176471' id='Line' opacity='0.100000001'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+$fontfamily: Gill Sans, Gill Sans MT, sans-serif;
+
+
+
+/* Mixins */
+@mixin goldenGrid($stroke: 2, $parameter: 'background-image',){
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='100%25' height='100%25' viewBox='0 0 1921 1082' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Grids' stroke='none' stroke-width='#{$stroke}' fill='none' fill-rule='evenodd' stroke-linecap='square'%3E%3Cg id='Grid-/-GoldenCanonGrid-1920' transform='translate(1.000000, 0.000000)' stroke='%23242424' %3E%3Cpath d='M1.17002645,2.58823529 L1917.67335,1079.41176' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M1.17002645,2.58823529 L1917.67335,1079.41176' id='Line' opacity='0.200000003' transform='translate(959.421687, 541.000000) scale(1, -1) translate(-959.421687, -541.000000) '%3E%3C/path%3E%3Cpath d='M960.0067,2.58823529 L1918.25836,1079.41176' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M960.0067,2.58823529 L1918.25836,1079.41176' id='Line' opacity='0.200000003' transform='translate(1439.132530, 541.000000) scale(1, -1) translate(-1439.132530, -541.000000) '%3E%3C/path%3E%3Cpath d='M0.585013224,2.58823529 L958.836674,1079.41176' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M0.585013224,2.58823529 L958.836674,1079.41176' id='Line' opacity='0.200000003' transform='translate(479.710843, 541.000000) scale(1, -1) translate(-479.710843, -541.000000) '%3E%3C/path%3E%3Cpath d='M0.292682927,1.58970588 L479.707317,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M0.292682927,1.58970588 L479.707317,1079.41029' id='Line' opacity='0.200000003' transform='translate(240.000000, 540.500000) scale(1, -1) translate(-240.000000, -540.500000) '%3E%3C/path%3E%3Cpath d='M479.292507,1.58970588 L958.418337,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M479.292507,1.58970588 L958.418337,1079.41029' id='Line' opacity='0.200000003' transform='translate(718.855422, 540.500000) scale(1, -1) translate(-718.855422, -540.500000) '%3E%3C/path%3E%3Cpath d='M960.291897,1.58970588 L1438.41955,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M960.291897,1.58970588 L1438.41955,1079.41029' id='Line' opacity='0.200000003' transform='translate(1199.355723, 540.500000) scale(1, -1) translate(-1199.355723, -540.500000) '%3E%3C/path%3E%3Cpath d='M1439.29251,1.58970588 L1918.41834,1079.41029' id='Line' opacity='0.200000003'%3E%3C/path%3E%3Cpath d='M1439.29251,1.58970588 L1918.41834,1079.41029' id='Line' opacity='0.200000003' transform='translate(1678.855422, 540.500000) scale(1, -1) translate(-1678.855422, -540.500000) '%3E%3C/path%3E%3Cpath d='M959.421687,1 L959.421687,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M479.37079,1 L479.37079,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M716.340053,1 L716.340053,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M1199.34005,1 L1199.34005,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M238.340053,1 L238.340053,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M1678.34005,1 L1678.34005,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M1438.79248,1 L1438.79248,1081' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,217 L1918.84337,217' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,865.176471 L1918.84337,865.176471' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,720.176471 L1918.84337,720.176471' id='Line' opacity='0.100000001'%3E%3C/path%3E%3Cpath d='M0,360.176471 L1918.84337,360.176471' id='Line' opacity='0.100000001'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+
+@mixin classBackgrounds( $parameter: background-image, $bem: '__'){
+    &#{$bem}parkour-class         { #{$parameter}: $image_beginnerIndoor; }
+    &#{$bem}commandotemple-indoor { #{$parameter}: $image_commandoTemple;}
+    &#{$bem}beginner-outdoor      { #{$parameter}: $image_beginnerOutdoor;}
+    &#{$bem}youth-class-8-12      { #{$parameter}: $image_youthParkour;}
+    &#{$bem}parkour-free-class    { #{$parameter}: $image_freeClass;}
+    &#{$bem}private-booking       { #{$parameter}: $image_privateBooking;}
+}   
+
+@mixin classcolours( $parameter: color, $bem: '__'){
+    &#{$bem}parkour-class         { #{$parameter}: $colour_beginnerIndoor; }
+    &#{$bem}commandotemple-indoor { #{$parameter}: $colour_commandoTemple; }
+    &#{$bem}beginner-outdoor      { #{$parameter}: $colour_beginnerOutdoor; }  
+    &#{$bem}youth-class-8-12      { #{$parameter}: $colour_youthParkour; } 
+    &#{$bem}parkour-free-class    { #{$parameter}: $colour_freeClass; }
+    &#{$bem}private-booking       { #{$parameter}: $colour_privateBooking; }
+}
+
+.londonparkour {
+
+    // Import the Slots view custom CSS.
+    @import "theme_v2/1_slots/slots";
+    
+    // The 'details' page of the selected slot
+    @import "theme_v2/2_details/details";
+    
+    // The payment card details page.
+    @import "theme_v2/4_payment/payment";
+    
+    // The payment card details page.
+    @import "theme_v2/5_thankyou/thankyou";
+        
+}

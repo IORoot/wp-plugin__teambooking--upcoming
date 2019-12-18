@@ -1,0 +1,20 @@
+/*
+*  SLIDE 2 - DETAILS - TABLET
+*/
+$tablet: 1024px;
+
+/* Override defaults */ 
+
+@media (max-width: $tablet) {
+
+
+    .tbk-payment-form-collect {
+
+        form {
+            .tbk-creditcard {
+                margin: 0px !important;
+            }
+        }
+    }
+    
+} 
