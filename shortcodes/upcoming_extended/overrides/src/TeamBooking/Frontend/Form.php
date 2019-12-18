@@ -292,7 +292,6 @@ class Form
 
                                 echo '<div class="tbk-service">';
 
-
                                     echo $this->output_location();
 
                                     // echo $this->output_price();
@@ -328,6 +327,11 @@ class Form
                                                         value="<?= Toolkit\objEncode($this->slot, TRUE, $this->slot->getUniqueId()) ?>">
                                                 <input type="hidden" name="owner" value="<?= esc_attr($this->coworker_id) ?>">
                                             <?php }
+
+/** Insert Coupon Entry */
+if (!$this->is_checkout && $this->service->getPotentialPrice($this->slot) > 0 && Functions\isThereOneCouponAtLeast()) {
+    echo self::coupon_line();
+} 
 
                                             //Let's render the hidden fields (pre-filled user data) if any
                                             foreach ($form_fields_hidden_markup as $hiddenfield) {
@@ -457,6 +461,7 @@ class Form
                                             </table>
                                         </div>
 
+
                                             <?php 
                                             /** Insert JQuery */
                                             if ($this->service->getPotentialPrice($this->slot) > 0) { ?>
@@ -474,13 +479,7 @@ class Form
                                             <?php } ?>
 
                                     <?php } ?>
-
-                                    <?php 
-                                    /** Insert Coupon Entry */
-                                    if (!$this->is_checkout && $this->service->getPotentialPrice($this->slot) > 0 && Functions\isThereOneCouponAtLeast()) {
-                                        echo self::coupon_line();
-                                    } 
-                                    ?>
+                                    
                                         <div class="tbk-book-now">
                                             <!-- confirm button -->
                                             <?php if ($this->is_checkout) {
