@@ -457,7 +457,6 @@ class Form
                                             </table>
                                         </div>
 
-
                                             <?php 
                                             /** Insert JQuery */
                                             if ($this->service->getPotentialPrice($this->slot) > 0) { ?>
