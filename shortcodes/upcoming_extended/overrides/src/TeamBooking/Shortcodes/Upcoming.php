@@ -31,7 +31,15 @@ use TeamBooking\Database\Services,
 class Upcoming
 {
     /**
-     * TeamBooking Upcoming Shortcode
+     *   ┌─────────────────────────────────────────────────────────────────────────┐ 
+     *   │                                                                         │░
+     *   │                                 RENDER                                  │░
+     *   │                                                                         │░
+     *   │                    Outputs the view of the shortcode                    │░
+     *   │                                                                         │░
+     *   └─────────────────────────────────────────────────────────────────────────┘░
+     *    ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+     *                                                                               
      *
      * @param $atts
      *
@@ -40,6 +48,9 @@ class Upcoming
      */
     public static function render($atts)
     {
+        /**
+         * Get all of the shortcode variables
+         */
         extract(shortcode_atts(array(
             'service'        => NULL,
             'coworker'       => NULL,
@@ -54,6 +65,10 @@ class Upcoming
             'descriptions'   => FALSE,
         ), $atts, 'tb-upcoming'));
 
+
+        /**
+         * Set Constants
+         */
         if (!defined('TBK_CALENDAR_SHORTCODE_FOUND')) {
             define('TBK_CALENDAR_SHORTCODE_FOUND', TRUE);
         }
@@ -62,17 +77,29 @@ class Upcoming
             Functions\registerFrontendResources();
         }
 
+        /**
+         * Set all CSS / JS for frontend
+         */
         Functions\enqueueFrontendResources();
 
         // Read-only mode is identified by length of instance id
         $unique_id = !$read_only ? Toolkit\randomNumber(8) : Toolkit\randomNumber(6);
 
+        /**
+         * If logged-in
+         */
         if (!$logged_only || ($logged_only && is_user_logged_in())) {
+
+            /**
+             * $services = array of specified services in shortcode
+             */
             if (NULL !== $service && !empty($service)) {
                 $services = array_map('trim', explode(',', $service));
                 foreach ($services as $key => $booking) {
                     try {
-                        // Remove inactive services
+                        /**
+                         * Remove inactive services
+                         */
                         if (!Services::get($booking)->isActive() || Services::get($booking)->getClass() === 'unscheduled') {
                             unset($services[ $key ]);
                         }
@@ -98,7 +125,15 @@ class Upcoming
                     return esc_html__('No active services', 'team-booking');
                 }
             }
+
+            /**
+             * Get $coworkers
+             */
             $coworkers = NULL !== $coworker ? array_map('trim', explode(',', $coworker)) : array();
+
+            /**
+             * Get all $parameters needed 
+             */
             $parameters = new \TeamBooking\RenderParameters();
             $parameters->setServiceIds($services);
             $parameters->setRequestedServiceIds($services);
@@ -114,19 +149,29 @@ class Upcoming
             $parameters->setShowMore($more);
             $parameters->setHideSameDaysLittleCal(filter_var($hide_same_days, FILTER_VALIDATE_BOOLEAN));
             $parameters->setShowServiceDescriptions($descriptions);
+
+            /**
+             * Parse all parameters
+             */
             Functions\parse_query_params($parameters);
+
+            /**
+             * ┌──────────────────────────────────────────────────────────┐
+             * │                         The VIEW                         │
+             * └──────────────────────────────────────────────────────────┘
+             */
             ob_start();
             ?>
-            <div class="ui calendar_main_container tbk-upcoming" id="tbk-container-<?= $parameters->getInstance() ?>"
-                 aria-live="polite"
-                 data-postid="<?= get_the_ID() ?>">
-                <?= static::getView($parameters, $read_only) ?>
-            </div>
-            <script>
-                if (typeof tbkLoadInstance === "function") {
-                    tbkLoadInstance(jQuery('#tbk-container-<?= $parameters->getInstance() ?>'));
-                }
-            </script>
+            
+                <div class="ui calendar_main_container tbk-upcoming" id="tbk-container-<?= $parameters->getInstance() ?>" aria-live="polite" data-postid="<?= get_the_ID() ?>">
+                    <?= static::getView($parameters, $read_only) ?>
+                </div>
+                <script>
+                    if (typeof tbkLoadInstance === "function") {
+                        tbkLoadInstance(jQuery('#tbk-container-<?= $parameters->getInstance() ?>'));
+                    }
+                </script>
+
             <?php
             return ob_get_clean();
         }
@@ -135,31 +180,56 @@ class Upcoming
 
 
 
-    /* ANDYP - getView is used to output the DOM structure of each slot.
-     *
+    /* 
+     *   ┌─────────────────────────────────────────────────────────────────────────┐ 
+     *   │                                                                         │░
+     *   │                                GET_VIEW                                 │░
+     *   │                                                                         │░
+     *   │                       Used to render the DOM view                       │░
+     *   │                                                                         │░
+     *   └─────────────────────────────────────────────────────────────────────────┘░
+     *    ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+     *                                                                               
      */
     public static function getView(\TeamBooking\RenderParameters $parameters, $read_only = FALSE)
     {
+        /**
+         * Get the Calendar object
+         */
         $calendar = new \TeamBooking\Calendar();
+
+        /**
+         * Get all slots for correct parameters
+         */
         $slots = $calendar->getSlots($parameters->getServiceIds(), $parameters->getCoworkerIds(), NULL, NULL, FALSE, $parameters->getTimezone());
         $slots = $slots->getAllSlotsRawSortedByTime();
+
+        /**
+         * Check there are slots
+         */
         if (count($slots) < 1) {
             ob_start();
             echo '<p>' . esc_html__('There are no upcoming events', 'team-booking') . '</p>';
 
             return ob_get_clean();
         }
+
         /** @var $slots Slot[] */
+
+        /**
+         * Set variables
+         */
         $all_slots_num = count($slots);
         $slots = array_slice($slots, 0, $parameters->getSlotsShown());
         $picked_slots_num = count($slots);
         $timezone_identifier = NULL === Cart::getPreference('timezone') ? $parameters->getTimezone()->getName() : Cart::getPreference('timezone');
-        ob_start();
 
-        // ANDYP - CUSTOM - call new method below to generate Schema.
-        do_action( 'tb_calendar_inject_header');
+        /**
+         * START Output buffer
+         */
+        ob_start();
         
-        // If this is NOT an AJAX call, then...
+        // If this is NOT an AJAX call, then render TIMEZONES button.
         if (!$parameters->getIsAjaxCall()) {
             ?>
             <div class="tbk-main-calendar-settings tbk-noselection">
@@ -171,9 +241,7 @@ class Upcoming
                 if (!$parameters->getNoTimezone()) { ?>
                     <div>
                         <?php if (!$parameters->getNoTimezone() && in_array(TRUE, Functions\getSettings()->getContinentsAllowed(), TRUE)) { ?>
-                            <div class="tbk-setting-button tbk-timezones" tabindex="0" style="margin: 0"
-                                 title="<?= esc_html__('Timezone', 'team-booking') ?>"
-                                 aria-label="<?= esc_html__('Timezone', 'team-booking') ?>">
+                            <div class="tbk-setting-button tbk-timezones" tabindex="0" style="margin: 0" title="<?= esc_html__('Timezone', 'team-booking') ?>" aria-label="<?= esc_html__('Timezone', 'team-booking') ?>">
                                 <i class="world tb-icon"></i>
                                 <?= Functions\timezone_list($timezone_identifier, $parameters->getIsWidget()) ?>
                             </div>
@@ -181,225 +249,254 @@ class Upcoming
                     </div>
                 <?php } ?>
             </div>
+        <?php } 
+        
+        /**
+         * Start opening tags for:
+         * - tb-frontend-calendar
+         *      - tbk-slide-canvas
+         *          - tbk-slide
+         */
+        if (!$parameters->getIsAjaxCall()) { ?>
+        <div class="<?= ($parameters->getIsWidget() === TRUE) ? 'tb-widget' : '' ?> tb-frontend-calendar tbk-slide-container" data-params="<?= $parameters->encode() ?>" data-instance='<?= $parameters->getInstance() ?>'>
+            <?= Components\Dimmer::getMarkup() ?>
+            <div class="tbk-slide-canvas tbk-slide-0">
+                <div class="tbk-slide">
         <?php } ?>
 
 
-
-
-        <?php if (!$parameters->getIsAjaxCall()) { ?>
-        <div
-        class="<?= ($parameters->getIsWidget() === TRUE) ? 'tb-widget' : '' ?> tb-frontend-calendar tbk-slide-container"
-        data-params="<?= $parameters->encode() ?>" data-instance='<?= $parameters->getInstance() ?>'>
-        <?= Components\Dimmer::getMarkup() ?>
-        <div class="tbk-slide-canvas tbk-slide-0">
-        <div class="tbk-slide">
-
-    <?php } ?>
-        <ul>
-                <?php
-                $prev_day = '';
-                foreach ($slots as $slot) {
-                    try {
-                        $service = Services::get($slot->getServiceId());
-                    } catch (\Exception $e) {
-                        continue;
-                    }
-
-                    $slot->setTimezone($parameters->getTimezone()->getName());
-
-                    /* Set all Classes and Attributes
-                    * For main section of each slot.
-                    */
-                    $classes = 'box-front tbk-upcoming-slot tbk-alt-' . $parameters->getAltSlotStyle();
-                    $classes .= ' slot-' . $slot->getServiceId();
-                    if (Functions\getSettings()->allowCart() && Cart::isSlotIn($slot)) {
-                        $classes .= ' tbk-in-cart';
-                    }
-                    $location = $slot->getLocation();
-                    $attributes_to_add = ' data-address="' . $location . '" ';
-
-                    if ($service->getSettingsFor('bookable') === 'logged_only' && !is_user_logged_in() && !$slot->isSoldout()) {
-                        $attributes_to_add .= 'class="' . $classes . ' '
-                            . 'tb-book-advice' . '" '
-                            . 'data-event="' . $slot->getEventId() . '" ';
-                    } else {
-
-
-                        if (!$read_only && !$slot->isSoldout() && !Functions\getSettings()->allowCart()) {
-                            $classes .= ' tb-book';
-                        } elseif ($read_only || $slot->isSoldout()) {
-                            $classes .= ' tbk-read-only';
-                        }
-
-
-                        $attributes_to_add .= 'class="' . $classes . '"';
-                        if (!$read_only) {
-                            $attributes_to_add .= 'data-slot="' . Toolkit\objEncode($slot, TRUE, $slot->getUniqueId()) . '" ';
-                            $attributes_to_add .= 'data-slot-id="' . Toolkit\objEncode($slot->getUniqueId()) . '" ';
-                            // Map logic
-                            $style = '';
-                            if (!empty($location) && !Functions\getSettings()->getMapStyleUseDefault()) {
-                                $style = htmlentities(json_encode(Functions\getSettings()->getMapStyle()));
-                            }
-                            $attributes_to_add .= 'data-mapstyle="' . $style . '" ';
-                        }
-                        if ($service->getSettingsFor('show_coworker')) {
-                            $attributes_to_add .= 'data-coworker="' . $slot->getCoworkerId() . '" ';
-                        }
-                        if ($slot->isSoldout()) {
-                            $attributes_to_add .= ' tabindex="0"';
-                        }
-                    }
-
-
-                    /*  Each List Item
-                    *
-                    */
-                    echo '<li>';
-
-                            echo '<div class="tbk-slot-wrapper">';
-
-                                    /*
-                                    * ANDYP - CUSTOM - Pass the serviceId through the ACTION.
-                                    */ 
-                                    do_action( 'tb_slot_inside_wrapper_start');
-                                    
-                                    /* Main details of each slot.
-                                    *
-                                    */
-                                    echo '<div ' . $attributes_to_add . '>';
-
-                                            //  ┌────────────────────────────────────────────────┐
-                                            //  │                     TODAY!                     │
-                                            //  └────────────────────────────────────────────────┘
-                                            if ($slot->getDateFormatted('Ymd') == date('Ymd')  ){ 
-                                                echo '<div class="tbk-alert tbk-alert__'.$slot->getServiceId().'"><div class="tbk-alert__icon"></div>Today! </div>';
-                                            }
-
-                                            echo '<div class="tbk-slot-info">';
-
-                                                /*
-                                                * ANDYP - CUSTOM - Pass the serviceId through the ACTION.
-                                                */ 
-                                                do_action( 'tb_slot_inside_info_start', $slot->getServiceId());
-
-                                                
-                                                //  ┌────────────────────────────────────────────────┐
-                                                //  │                  Date / Time                   │
-                                                //  └────────────────────────────────────────────────┘
-                                                echo '<p class="tbk-date">';
-
-                                                    // Weekday - coloured
-                                                    echo '<span class="tbk-weekday">'
-                                                        . date_i18n(
-                                                            (($parameters->getIsWidget() === TRUE) ? 'D' : 'l jS'),
-                                                            strtotime($slot->getDateFormatted('Y')
-                                                                . '-' . $slot->getDateFormatted('m')
-                                                                . '-' . $slot->getDateFormatted('d')
-                                                            ))
-                                                        . ' </span>';
-                                                    // Time
-                                                    echo '<span class="tbk-times"><i class="wait tb-icon"></i>' . $slot->getTimesString() . '</span>';
-
-                                                echo '</p>';
-
-                                                //  ┌────────────────────────────────────────────────┐
-                                                //  │                  Service Name                  │
-                                                //  └────────────────────────────────────────────────┘
-                                                echo '<h4 class="tbk-service-name tbk-service-name__'.$slot->getServiceId().'">' . $slot->getServiceName(TRUE) . '</h4>';
-
-                                                
-                                                //  ┌────────────────────────────────────────────────┐
-                                                //  │                    Location                    │
-                                                //  └────────────────────────────────────────────────┘
-                                                // Location of Service (regex first part)
-                                                if ($slot->getLocation() != NULL) {
-                                                    // remove everything after first comma. 
-                                                    $location = preg_replace('/^([^,]*).*$/', '$1', $slot->getLocation());
-                                                    // output
-                                                    echo '<p class="tbk-location"><i class="marker tb-icon"></i>' 
-                                                        . esc_html(ucwords($location)) 
-                                                        . '</p>';
-                                                }
-
-                                                // Custom WordPress hook - runs action with the current $slot - do_action('tbk_schedule_slot_render', $slot);
-                                                \TeamBooking\Actions\schedule_slot_render($slot);
-
-
-                                                //  ┌────────────────────────────────────────────────┐
-                                                //  │                  Descriptions                  │
-                                                //  └────────────────────────────────────────────────┘
-                                                if ($parameters->getShowServiceDescriptions()) {
-                                                    echo '<div class="tbk-service-desc">' . $service->getDescription(TRUE) . '</div>';
-                                                }
-
-                                            echo '</div>';
-
-                                            /*
-                                            * ANDYP - CUSTOM - Pass the serviceId through the ACTION.
-                                            */ 
-                                            echo '<div class="tbk-class-colour-background tbk-class-colour-background__'.$slot->getServiceId().'">';
-                                                echo '<div class="tbk-class-image-background tbk-class-image-background__'.$slot->getServiceId().'" >';
-                                                    echo '<div class="tbk-class-image tbk-class-image__'.$slot->getServiceId().'"></div>';
-                                                    echo '<div class="tbk-arrow__icon"></div>';
-                                                echo '</div>';
-                                            echo '</div>';
-                                            do_action( 'tb_slot_inside_info_end', $slot->getServiceId());
-                                           
-                                            
-
-                                    echo '</div>';
-
-                                    /** 
-                                    * ANDYP - CUSTOM - Pass the serviceId through the ACTION.
-                                    */ 
-                                    do_action( 'tb_slot_inside_wrapper_end', $slot->getServiceId());
-
-                            echo '</div>';
-                    echo '</li>';
-
-                    $prev_day = $slot->getDateFormatted('Ymd');
-                }
-                ?>
-        </ul>
         <?php 
-        
+        /**
+         * Start unordered list of SLOTS.
+         */
+        ?>
+        <ul> 
+        <?php
+
+            $prev_day = '';
+
+            /**
+             * The Loop through all of the slots.
+             */
+            foreach ($slots as $slot) {
+
+                /**
+                 * Get the service for the slot
+                 */
+                try {
+                    $service = Services::get($slot->getServiceId());
+                } catch (\Exception $e) {
+                    continue;
+                }
+
+                /**
+                 * SET the timezone for the slot
+                 */
+                $slot->setTimezone($parameters->getTimezone()->getName());
+
+                /** 
+                * Set all Classes For main section of each slot.
+                */
+                $classes = 'box-front tbk-upcoming-slot tbk-alt-' . $parameters->getAltSlotStyle();
+                $classes .= ' slot-' . $slot->getServiceId();
+                if (Functions\getSettings()->allowCart() && Cart::isSlotIn($slot)) {
+                    $classes .= ' tbk-in-cart';
+                }
+
+                /**
+                 * Get the Slot Location
+                 */
+                $location = $slot->getLocation();
+
+                /** 
+                * Set all Attributes For main section of each slot.
+                */
+                $attributes_to_add = ' data-address="' . $location . '" ';
+
+                if ($service->getSettingsFor('bookable') === 'logged_only' && !is_user_logged_in() && !$slot->isSoldout()) {
+                    $attributes_to_add .= 'class="' . $classes . ' '
+                        . 'tb-book-advice' . '" '
+                        . 'data-event="' . $slot->getEventId() . '" ';
+                } else {
+
+                    /**
+                     * Add 'Sold out' to classes 
+                     */
+                    if (!$read_only && !$slot->isSoldout() && !Functions\getSettings()->allowCart()) {
+                        $classes .= ' tb-book';
+                    } elseif ($read_only || $slot->isSoldout()) {
+                        $classes .= ' tbk-read-only';
+                    }
+
+                    /**
+                     * Add more attributes for slot
+                     */
+                    $attributes_to_add .= 'class="' . $classes . '"';
+                    if (!$read_only) {
+                        $attributes_to_add .= 'data-slot="' . Toolkit\objEncode($slot, TRUE, $slot->getUniqueId()) . '" ';
+                        $attributes_to_add .= 'data-slot-id="' . Toolkit\objEncode($slot->getUniqueId()) . '" ';
+                        // Map logic
+                        $style = '';
+                        if (!empty($location) && !Functions\getSettings()->getMapStyleUseDefault()) {
+                            $style = htmlentities(json_encode(Functions\getSettings()->getMapStyle()));
+                        }
+                        $attributes_to_add .= 'data-mapstyle="' . $style . '" ';
+                    }
+                    if ($service->getSettingsFor('show_coworker')) {
+                        $attributes_to_add .= 'data-coworker="' . $slot->getCoworkerId() . '" ';
+                    }
+                    if ($slot->isSoldout()) {
+                        $attributes_to_add .= ' tabindex="0"';
+                    }
+                }
+
+                /*  
+                *   Each List Item
+                */
+                echo '<li>';
+
+                    echo '<div class="tbk-slot-wrapper">';
+                            
+                        //  ┌──────────────────────────────────────────────────────────┐
+                        //  │                    MAIN SLOT DETAILS                     │
+                        //  │                                                          │
+                        //  │         Contains all slot attributes & classes.          │
+                        //  │                                                          │
+                        //  └──────────────────────────────────────────────────────────┘
+                        echo '<div ' . $attributes_to_add . '>';
+
+                            //  ┌────────────────────────────────────────────────┐
+                            //  │                     TODAY!                     │
+                            //  └────────────────────────────────────────────────┘
+                            if ($slot->getDateFormatted('Ymd') == date('Ymd')  ){ 
+                                echo '<div class="tbk-alert tbk-alert__'.$slot->getServiceId().'"><div class="tbk-alert__icon"></div>Today! </div>';
+                            }
+
+                                //  ┌──────────────────────────────────────────────────────────┐
+                                //  │                        SLOT Info                         │
+                                //  └──────────────────────────────────────────────────────────┘
+                                echo '<div class="tbk-slot-info">';
+                                        
+                                    //  ┌────────────────────────────────────────────────┐
+                                    //  │                  Date / Time                   │
+                                    //  └────────────────────────────────────────────────┘
+                                    echo '<p class="tbk-date">';
+
+                                        // Weekday - coloured
+                                        echo '<span class="tbk-weekday">'
+                                            . date_i18n(
+                                                (($parameters->getIsWidget() === TRUE) ? 'D' : 'l jS'),
+                                                strtotime($slot->getDateFormatted('Y')
+                                                    . '-' . $slot->getDateFormatted('m')
+                                                    . '-' . $slot->getDateFormatted('d')
+                                                ))
+                                            . ' </span>';
+                                        // Time
+                                        echo '<span class="tbk-times"><i class="wait tb-icon"></i>' . $slot->getTimesString() . '</span>';
+
+                                    echo '</p>';
+
+                                    //  ┌────────────────────────────────────────────────┐
+                                    //  │                  Service Name                  │
+                                    //  └────────────────────────────────────────────────┘
+                                    echo '<h4 class="tbk-service-name tbk-service-name__'.$slot->getServiceId().'">' . $slot->getServiceName(TRUE) . '</h4>';
+                                            
+                                    //  ┌────────────────────────────────────────────────┐
+                                    //  │                    Location                    │
+                                    //  └────────────────────────────────────────────────┘
+                                    // Location of Service (regex first part)
+                                    if ($slot->getLocation() != NULL) {
+                                        // remove everything after first comma. 
+                                        $location = preg_replace('/^([^,]*).*$/', '$1', $slot->getLocation());
+                                        // output
+                                        echo '<p class="tbk-location"><i class="marker tb-icon"></i>' 
+                                            . esc_html(ucwords($location)) 
+                                            . '</p>';
+                                    }
+
+                                    // Custom WordPress hook - runs action with the current $slot - do_action('tbk_schedule_slot_render', $slot);
+                                    \TeamBooking\Actions\schedule_slot_render($slot);
+
+                                    //  ┌────────────────────────────────────────────────┐
+                                    //  │                  Descriptions                  │
+                                    //  └────────────────────────────────────────────────┘
+                                    if ($parameters->getShowServiceDescriptions()) {
+                                        echo '<div class="tbk-service-desc">' . $service->getDescription(TRUE) . '</div>';
+                                    }
+
+                                echo '</div>'; //  </tbk-slot-info>
+
+                                //  ┌──────────────────────────────────────────────────────────┐
+                                //  │                        The IMAGE                         │
+                                //  └──────────────────────────────────────────────────────────┘
+                                echo '<div class="tbk-class-colour-background tbk-class-colour-background__'.$slot->getServiceId().'">';
+                                    echo '<div class="tbk-class-image-background tbk-class-image-background__'.$slot->getServiceId().'" >';
+                                        echo '<div class="tbk-class-image tbk-class-image__'.$slot->getServiceId().'"></div>';
+                                        echo '<div class="tbk-arrow__icon"></div>';
+                                    echo '</div>';
+                                echo '</div>';
+                                        
+                            echo '</div>'; // </main-slot-details>
+
+                        echo '</div>'; // </tbk-slot-wrapper>
+
+                echo '</li>'; // End of list item.
+
+                /**
+                 * Set the previous day
+                 */
+                $prev_day = $slot->getDateFormatted('Ymd');
+
+            } // End of foreach ($slots as $slot) ?>
+        </ul>
+
+
+        <?php 
         /* Show more button.
          *
         */
-        if ($all_slots_num !== $picked_slots_num
-        && $parameters->getShowMore()
-        && ($picked_slots_num < $parameters->getSlotsLimit() || $parameters->getSlotsLimit() === 0)
-    ) { ?>
-        <div class="tbk-button tbk-show-more" data-increment="6"
-             data-limit="<?= $parameters->getSlotsLimit() ?>">
-            <?= esc_html__('Show more', 'team-booking') ?>
-        </div>
-    <?php } ?> 
-        <?php if (!$parameters->getIsAjaxCall()) { ?>
-        </div>
-        </div>
-        </div>
+        if ($all_slots_num !== $picked_slots_num && $parameters->getShowMore() && ($picked_slots_num < $parameters->getSlotsLimit() || $parameters->getSlotsLimit() === 0) ) { ?>
+            <div class="tbk-button tbk-show-more" data-increment="6" data-limit="<?= $parameters->getSlotsLimit() ?>">
+                <?= esc_html__('Show more', 'team-booking') ?>
+            </div>
+        <?php } ?> 
 
-        <?php
-        // ANDYP - CUSTOM - call new method below to generate Schema.
-        do_action( 'tb_calendar_inject_footer', $slots);
-        // ANDYP - CUSTOM - Need to use the class services to render.
-        self::getUpcomingSchema($slots);
-        ?>
+        <?php 
+        /**
+         * Close all DIVs:
+         *          - tbk-slide
+         *      - tbk-slide-canvas
+         * - tb-frontend-calendar
+         */
+        if (!$parameters->getIsAjaxCall()) { ?>
 
+                    </div>
+                </div>
+            </div>
+            <?php 
 
-    <?php } ?>
-        <?php
+            self::getUpcomingSchema($slots); // ANDYP - CUSTOM - Need to use the class services to render. 
+        }
+
+        /**
+         * Return Output buffer
+         */
         return ob_get_clean();
     }
+    
 
-    /** Schema Creator for each slot
+    /** 
+     *   ┌─────────────────────────────────────────────────────────────────────────┐ 
+     *   │                                                                         │░
+     *   │                                                                         │░
+     *   │                      ANDYP - SCHEMA CREATION                            │░
+     *   │                                                                         │░
+     *   │                                                                         │░
+     *   └─────────────────────────────────────────────────────────────────────────┘░
+     *    ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░                                                                             
      *
-     * ANDYP - CUSTOM - Render Schema
      * Creates a JSON-LD Structured data for each rendered slot in the calendar.
      * Schema template from https://developers.google.com/search/docs/data-types/event
-     *
      *
      * @return
      */
@@ -426,7 +523,6 @@ class Upcoming
                                         "https://londonparkour.com/wp-content/uploads/2018/05/Eliza_LDNPK_Classes_1920x1440.jpg",
                                         "https://londonparkour.com/wp-content/uploads/2018/05/Eliza_LDNPK_Classes_1920x1080.jpg"
                                         ],';
-
             $script_tag .= '"offers": {';
             $script_tag .= '"@type": "Offer",';
             $script_tag .= '"availability": "http://schema.org/InStock",';

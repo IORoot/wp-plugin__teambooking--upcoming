@@ -19,7 +19,7 @@ add_action( 'get_footer', 'register_css_upcoming_extended_css_new' );
 
 
 
- /* SKIP Reservation pages
+/* SKIP Reservation pages
  *
  * http://stroheimdesign.com/docs/2_dev.html#actions
  * 2.2.1 - third example.

@@ -8,16 +8,5 @@ Author: Andy Pearson
 Author URI: https://londonparkour.com
 */
 
-/* CHECK 1 - TeamBooking Dependency
- *
- * IMPORTANT!!!
- * 
- * Please make the following symbolic links to override standard files.
- * run the ./create_tb_links.sh script to create them.
- * 
- * Ensure that the TeamBooking Plugin is running and activated too.
-*/
-
-
-// CUSTOM 1 - New Upcoming Shortcode.
+// CUSTOM Upcoming Shortcode.
 include "shortcodes/upcoming_extended/Upcoming_extended.php";
