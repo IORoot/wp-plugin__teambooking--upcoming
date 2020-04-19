@@ -12,7 +12,7 @@
 
 // Register CSS File (footer - stop render blocking)
 function register_css_upcoming_extended_css_new() {
-    wp_register_style( 'tb-upcoming-extended-css-new', plugins_url( './css/style.css', __FILE__ ) );
+    wp_register_style( 'tb-upcoming-extended-css-new', plugins_url( 'css/style.css', __FILE__ ) );
     wp_enqueue_style('tb-upcoming-extended-css-new');
 }
 add_action( 'get_footer', 'register_css_upcoming_extended_css_new' );
