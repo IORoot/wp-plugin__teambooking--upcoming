@@ -369,7 +369,7 @@ class Upcoming
                             //  │                     TODAY!                     │
                             //  └────────────────────────────────────────────────┘
                             if ($slot->getDateFormatted('Ymd') == date('Ymd')  ){ 
-                                echo '<div class="tbk-alert tbk-alert__'.$slot->getServiceId().'"><div class="tbk-alert__icon"></div>Today! </div>';
+                                echo '<div class="tbk-alert tbk-alert__'.$slot->getServiceId().'"><div class="mdi mdi-star"></div>Today! </div>';
                             }
 
                                 //  ┌──────────────────────────────────────────────────────────┐
@@ -432,7 +432,7 @@ class Upcoming
                                 echo '<div class="tbk-class-colour-background tbk-class-colour-background__'.$slot->getServiceId().'">';
                                     echo '<div class="tbk-class-image-background tbk-class-image-background__'.$slot->getServiceId().'" >';
                                         echo '<div class="tbk-class-image tbk-class-image__'.$slot->getServiceId().'"></div>';
-                                        echo '<div class="tbk-arrow__icon"></div>';
+                                        echo '<div class="mdi mdi-chevron-right"></div>';
                                     echo '</div>';
                                 echo '</div>';
                                         
@@ -458,6 +458,7 @@ class Upcoming
         if ($all_slots_num !== $picked_slots_num && $parameters->getShowMore() && ($picked_slots_num < $parameters->getSlotsLimit() || $parameters->getSlotsLimit() === 0) ) { ?>
             <div class="tbk-button tbk-show-more" data-increment="6" data-limit="<?= $parameters->getSlotsLimit() ?>">
                 <?= esc_html__('Show more', 'team-booking') ?>
+                <i class="mdi mdi-chevron-down"></i>
             </div>
         <?php } ?> 
 

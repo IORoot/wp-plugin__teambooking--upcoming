@@ -112,32 +112,13 @@
   right: 3%;
   text-align: center;
 }
-.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-alert__parkour-class {
-  color: #E86546;
-}
-.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-alert__commandotemple-indoor {
-  color: #D0C8B3;
-}
-.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-alert__beginner-outdoor {
-  color: #53A5E3;
-}
-.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-alert__youth-class-8-12 {
-  color: #11998E;
-}
-.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-alert__parkour-free-class {
-  color: #E34F65;
-}
-.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-alert__private-booking {
-  color: #FBAB7E;
-}
-.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-alert__icon::after {
-  font-family: "Material Icons";
-  content: "";
-  font-size: 58px;
-  display: inline-block;
-  width: 100%;
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-alert .mdi {
+  position: absolute;
+  bottom: 29px;
+  right: 14px;
+  width: 58px;
   height: 58px;
-  line-height: 58px;
+  filter: url(#night);
 }
 .londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-slot-info {
   padding: 29px 8.33% 0px 8.33%;
@@ -281,18 +262,12 @@
 .londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-class-image__private-booking {
   background: url("/wp-content/uploads/2019/09/kevin_landing_532x800.png") no-repeat 50% 100%/auto 90%;
 }
-.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-arrow__icon {
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .mdi {
   position: absolute;
   bottom: 20px;
   right: 26px;
-}
-.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child ul li .tbk-slot-wrapper .tbk-upcoming-slot .tbk-arrow__icon::after {
-  color: #ffffff;
-  font-family: "Material Icons";
-  content: "";
-  font-size: 24px;
-  vertical-align: sub;
-  display: inline-block;
+  width: 29px;
+  height: 29px;
 }
 .londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child .tbk-show-more {
   float: left;
@@ -306,12 +281,10 @@
   line-height: 58px;
   padding: 0px;
 }
-.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child .tbk-show-more::after {
-  font-family: "Material Icons";
-  content: "";
-  font-size: 18px;
-  vertical-align: sub;
-  display: inline-block;
+.londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child .tbk-show-more .mdi {
+  filter: url(#night);
+  width: 16px;
+  height: 18px;
 }
 .londonparkour .tbk-upcoming .tb-frontend-calendar .tbk-slide-canvas .tbk-slide:first-child .tbk-show-more:hover {
   background-color: #53A5E3;
@@ -394,30 +367,12 @@
   float: left;
   width: 8.33%;
 }
-.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-reservation-form-navigation .tbk-details__goback--parkour-class {
-  color: #E86546;
-}
-.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-reservation-form-navigation .tbk-details__goback--commandotemple-indoor {
-  color: #D0C8B3;
-}
-.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-reservation-form-navigation .tbk-details__goback--beginner-outdoor {
-  color: #53A5E3;
-}
-.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-reservation-form-navigation .tbk-details__goback--youth-class-8-12 {
-  color: #11998E;
-}
-.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-reservation-form-navigation .tbk-details__goback--parkour-free-class {
-  color: #E34F65;
-}
-.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-reservation-form-navigation .tbk-details__goback--private-booking {
-  color: #FBAB7E;
-}
 .londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-reservation-form-navigation .tbk-details__goback--commandotemple-indoor {
   color: #fff;
 }
-.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-reservation-form-navigation .tbk-details__goback i:after {
-  content: "";
-  font-size: 58px;
+.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-reservation-form-navigation .tbk-details__goback .mdi {
+  width: 58px;
+  height: 58px;
 }
 .londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-reservation-form-navigation .tbk-details__goback:hover i {
   color: #242424;
@@ -458,31 +413,6 @@
 .londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__time {
   margin-top: 29px;
   font-weight: 600;
-}
-.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__time--parkour-class {
-  color: #E86546;
-}
-.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__time--commandotemple-indoor {
-  color: #D0C8B3;
-}
-.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__time--beginner-outdoor {
-  color: #53A5E3;
-}
-.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__time--youth-class-8-12 {
-  color: #11998E;
-}
-.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__time--parkour-free-class {
-  color: #E34F65;
-}
-.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__time--private-booking {
-  color: #FBAB7E;
-}
-.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__time::before {
-  font-family: "Material Icons";
-  content: "";
-  font-size: 22px;
-  vertical-align: sub;
-  margin-right: 5px;
 }
 .londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-class-header .tbk-details__today {
   position: absolute;
@@ -601,13 +531,6 @@
   position: absolute;
   top: 0px;
   left: 0px;
-}
-.londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service__location a::before {
-  font-family: "Material Icons";
-  content: "";
-  font-size: 22px;
-  vertical-align: sub;
-  display: inline-block;
 }
 .londonparkour .tbk-detail-wrapper .tbk-reservation-form-container .tbk-service__price {
   padding: 29px 0px;

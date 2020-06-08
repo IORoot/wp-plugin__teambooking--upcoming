@@ -122,17 +122,14 @@
                                         right: 3%;
                                         text-align: center;
 
-                                        @include classcolours();
-
                                         // STAR Icon! 
-                                        &__icon::after {
-                                            font-family: "Material Icons";
-                                            content: '\e838';
-                                            font-size: 58px;
-                                            display: inline-block;
-                                            width: 100%;
+                                        .mdi {
+                                            position: absolute;
+                                            bottom: 29px;
+                                            right: 14px;
+                                            width: 58px; 
                                             height: 58px;
-                                            line-height: 58px;
+                                            filter: url(#night);
                                         }
                                     }
 
@@ -297,19 +294,12 @@
                                         @include classBackgrounds('background');
                                     }
 
-                                    .tbk-arrow__icon {
+                                    .mdi {
                                         position: absolute;
                                         bottom:20px;
                                         right: 26px;
-
-                                        &::after {
-                                            color: #ffffff;
-                                            font-family: "Material Icons";
-                                            content: '\e8fd';
-                                            font-size: 24px;
-                                            vertical-align: sub;
-                                            display: inline-block;
-                                        }
+                                        width: 29px;
+                                        height: 29px;
                                     }
                                 }
 
@@ -333,12 +323,10 @@
                         line-height: 58px;
                         padding: 0px;
 
-                        &::after {
-                            font-family: "Material Icons";
-                            content: '\e313';
-                            font-size: 18px;
-                            vertical-align: sub;
-                            display: inline-block;
+                        .mdi {
+                            filter: url(#night);
+                            width: 16px;
+                            height: 18px;
                         }
 
                         &:hover {

@@ -726,7 +726,7 @@ if (!$this->is_checkout && $this->service->getPotentialPrice($this->slot) > 0 &&
             <div class="ui tbk-grid">
                 <div class="tbk-row tbk-reservation-form-navigation">
                     <div class="tbk-details__goback tbk-column tbk-back-to <?= $additional_classes ?>" tabindex="0" aria-label="<?= esc_html__('back', 'team-booking') ?>">
-                        <i class="material-icons tbk-details__goback--<?php echo $this->service_id; ?>"></i>
+                        <i class="mdi mdi-chevron-left mdi--night"></i>
                     </div>
                 </div>
             </div>
@@ -746,7 +746,7 @@ if (!$this->is_checkout && $this->service->getPotentialPrice($this->slot) > 0 &&
 
         if ($this->slot->getDateFormatted('Ymd') == date('Ymd')  ){ 
             echo '<div class="tbk-details__today tbk-details__today--'. $this->service_id . '">';
-                echo '<div class="tbk-alert__icon"></div>Today!';
+                echo '<div class="mdi mdi-star"></div>Today!';
             echo '</div>';
         }
 
@@ -804,7 +804,7 @@ if (!$this->is_checkout && $this->service->getPotentialPrice($this->slot) > 0 &&
 
             echo '<p class="tbk-service__location ">';
                 echo '<span class="cover cover--'. $this->service_id . '"></span>';
-                echo '<a target="_blank" href="https://www.google.com/maps/search/?api=1&query='. $this->service_location . '">'. $first_address_line[0] . '</a>';
+                echo '<a target="_blank" href="https://www.google.com/maps/search/?api=1&query='. $this->service_location . '"><i class="mdi mdi-map-marker"></i>'. $first_address_line[0] . '</a>';
             echo '</p>';
         }
 
@@ -876,8 +876,8 @@ if (!$this->is_checkout && $this->service->getPotentialPrice($this->slot) > 0 &&
 
         ob_start();
 
-            echo '<a href="https://clients.mindbodyonline.com/classic/mainclass?studioid=31451" class="commandotemple-link commandotemple-mindbody-link c-link" target="_blank">MindBody Booking <i class="fa fa-external-link"></i></a>';
-            echo '<a href="http://bestronger.co.uk" class="commandotemple-link commandotemple-website-link c-link" target="_blank">Website: bestronger.co.uk <i class="fa fa-external-link"></i></a>';
+            echo '<a href="https://clients.mindbodyonline.com/classic/mainclass?studioid=31451" class="commandotemple-link commandotemple-mindbody-link" target="_blank">MindBody Booking <i class="fa fa-external-link"></i></a>';
+            echo '<a href="http://bestronger.co.uk" class="commandotemple-link commandotemple-website-link" target="_blank">Website: bestronger.co.uk <i class="fa fa-external-link"></i></a>';
 
         return ob_get_clean();
     }

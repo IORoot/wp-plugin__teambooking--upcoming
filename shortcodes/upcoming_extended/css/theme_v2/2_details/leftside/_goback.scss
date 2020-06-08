@@ -8,17 +8,14 @@
     .tbk-details {
         &__goback {
 
-            @include classcolours('color', '--');
-
             &--commandotemple-indoor {
                 color: #fff;
             }
 
-            i {
-                &:after {
-                    content:'\e5cb';
-                    font-size: 58px;
-                }
+            .mdi {
+                width: 58px;
+                height: 58px;
+                
             }
 
             &:hover {

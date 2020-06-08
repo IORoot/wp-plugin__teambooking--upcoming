@@ -52,16 +52,6 @@
             &__time {
                 margin-top: 29px;
                 font-weight: 600;
-
-                @include classcolours('color', '--');
-
-                &::before {
-                    font-family: "Material Icons";
-                    content: '\e192';
-                    font-size: 22px;
-                    vertical-align: sub;
-                    margin-right: 5px;
-                }
             }
 
             &__today {
